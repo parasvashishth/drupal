@@ -650,6 +650,7 @@ $settings['update_free_access'] = FALSE;
 # $config['system.performance']['fast_404']['html'] = '<!DOCTYPE html><html><head><title>404 Not Found</title></head><body><h1>Not Found</h1><p>The requested URL "@path" was not found on this server.</p></body></html>';
 
 /**
+ * 
  * Load services definition file.
  */
 $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
@@ -781,3 +782,4 @@ $databases['default']['default'] = array (
   'driver' => 'mysql',
 );
 $settings['config_sync_directory'] = 'sites/default/files/config_GzHsMm4vN1ohI5X60I4f01n8mHfLy4cfHuyVPoNgxdnJEbDohxapm_d_NkdFzAbAaEkYp2cQqw/sync';
+$config['system.logging']['error_level'] = 'verbose';
