@@ -31,14 +31,14 @@ class LengthValidator extends ConstraintValidator
         }
 
         if (null !== $constraint->min && null === $constraint->allowEmptyString) {
-            @trigger_error(sprintf('Using the "%s" constraint with the "min" option without setting the "allowEmptyString" one is deprecated and defaults to true. In 5.0, it will become optional and default to false.', Length::class), E_USER_DEPRECATED);
+            @trigger_error(sprintf('Using the "%s" constraint with the "min" option without setting the "allowEmptyString" one is deprecated and defaults to true. In 5.0, it will become optional and default to false.', Length::class), \E_USER_DEPRECATED);
         }
 
         if (null === $value || ('' === $value && ($constraint->allowEmptyString ?? true))) {
             return;
         }
 
-        if (!is_scalar($value) && !(\is_object($value) && method_exists($value, '__toString'))) {
+        if (!\is_scalar($value) && !(\is_object($value) && method_exists($value, '__toString'))) {
             throw new UnexpectedValueException($value, 'string');
         }
 

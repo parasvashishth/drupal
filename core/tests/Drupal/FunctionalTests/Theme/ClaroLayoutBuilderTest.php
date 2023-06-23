@@ -24,6 +24,7 @@ class ClaroLayoutBuilderTest extends BrowserTestBase {
     'layout_builder',
     'layout_builder_views_test',
     'layout_test',
+    'field_ui',
     'block',
     'block_test',
     'node',
@@ -86,7 +87,7 @@ class ClaroLayoutBuilderTest extends BrowserTestBase {
     $assert_session->linkNotExists('Manage layout');
     $assert_session->fieldDisabled('layout[allow_custom]');
 
-    $this->drupalPostForm(NULL, ['layout[enabled]' => TRUE], 'Save');
+    $this->submitForm(['layout[enabled]' => TRUE], 'Save');
     $assert_session->linkExists('Manage layout');
     $this->clickLink('Manage layout');
 

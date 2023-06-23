@@ -25,7 +25,6 @@ require_once __DIR__ . '/includes/utility.inc';
 
 $request = Request::createFromGlobals();
 // Manually resemble early bootstrap of DrupalKernel::boot().
-require_once __DIR__ . '/includes/bootstrap.inc';
 DrupalKernel::bootEnvironment();
 
 try {
@@ -39,14 +38,13 @@ catch (HttpExceptionInterface $e) {
 
 if (Settings::get('rebuild_access', FALSE) ||
   ($request->query->get('token') && $request->query->get('timestamp') &&
-    ((REQUEST_TIME - $request->query->get('timestamp')) < 300) &&
+    (($request->server->getInt('REQUEST_TIME') - $request->query->get('timestamp')) < 300) &&
     hash_equals(Crypt::hmacBase64($request->query->get('timestamp'), Settings::get('hash_salt')), $request->query->get('token'))
   )) {
   // Clear user cache for all major platforms.
   $user_caches = [
     'apcu_clear_cache',
     'wincache_ucache_clear',
-    'xcache_clear_cache',
   ];
   array_map('call_user_func', array_filter($user_caches, 'is_callable'));
 

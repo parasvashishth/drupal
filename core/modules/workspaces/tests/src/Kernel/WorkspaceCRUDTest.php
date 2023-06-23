@@ -64,7 +64,6 @@ class WorkspaceCRUDTest extends KernelTestBase {
 
     $this->setUpCurrentUser();
 
-    $this->installSchema('system', ['key_value_expire']);
     $this->installSchema('node', ['node_access']);
 
     $this->installEntitySchema('workspace');
@@ -322,6 +321,14 @@ class WorkspaceCRUDTest extends KernelTestBase {
     $stage->delete();
     $this->assertNull(Workspace::load('dev'));
     $this->assertNull(Workspace::load('stage'));
+  }
+
+  /**
+   * Tests loading the workspace tree when there are no workspaces available.
+   */
+  public function testEmptyWorkspaceTree() {
+    $tree = \Drupal::service('workspaces.repository')->loadTree();
+    $this->assertSame([], $tree);
   }
 
 }

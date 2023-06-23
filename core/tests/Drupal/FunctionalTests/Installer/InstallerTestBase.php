@@ -7,6 +7,7 @@ use Drupal\Core\Language\Language;
 use Drupal\Core\Session\UserSession;
 use Drupal\Core\Site\Settings;
 use Drupal\Core\Test\HttpClientMiddleware\TestHttpClientMiddleware;
+use Drupal\Core\Utility\PhpRequirements;
 use Drupal\Tests\BrowserTestBase;
 use Drupal\Tests\RequirementsPageTrait;
 use GuzzleHttp\HandlerStack;
@@ -71,6 +72,19 @@ abstract class InstallerTestBase extends BrowserTestBase {
    * @var bool
    */
   protected $isInstalled = FALSE;
+
+  /**
+   * {@inheritdoc}
+   */
+  protected function installParameters() {
+    $params = parent::installParameters();
+    // Set the checkbox values to FALSE so that
+    // \Drupal\Tests\BrowserTestBase::translatePostValues() does not remove
+    // them.
+    $params['forms']['install_configure_form']['enable_update_status_module'] = FALSE;
+    $params['forms']['install_configure_form']['enable_update_status_emails'] = FALSE;
+    return $params;
+  }
 
   /**
    * {@inheritdoc}
@@ -214,12 +228,15 @@ abstract class InstallerTestBase extends BrowserTestBase {
 
   /**
    * Installer step: Select language.
+   *
+   * @see \Drupal\Core\Installer\Form\SelectLanguageForm
    */
   protected function setUpLanguage() {
     $edit = [
       'langcode' => $this->langcode,
     ];
-    $this->drupalPostForm(NULL, $edit, $this->translations['Save and continue']);
+    // The 'Select Language' step is always English.
+    $this->submitForm($edit, 'Save and continue');
   }
 
   /**
@@ -229,7 +246,7 @@ abstract class InstallerTestBase extends BrowserTestBase {
     $edit = [
       'profile' => $this->profile,
     ];
-    $this->drupalPostForm(NULL, $edit, $this->translations['Save and continue']);
+    $this->submitForm($edit, $this->translations['Save and continue']);
   }
 
   /**
@@ -237,7 +254,7 @@ abstract class InstallerTestBase extends BrowserTestBase {
    */
   protected function setUpSettings() {
     $edit = $this->translatePostValues($this->parameters['forms']['install_settings_form']);
-    $this->drupalPostForm(NULL, $edit, $this->translations['Save and continue']);
+    $this->submitForm($edit, $this->translations['Save and continue']);
   }
 
   /**
@@ -249,7 +266,9 @@ abstract class InstallerTestBase extends BrowserTestBase {
    * @see system_requirements()
    */
   protected function setUpRequirementsProblem() {
-    // Do nothing.
+    if (version_compare(phpversion(), PhpRequirements::getMinimumSupportedPhp()) < 0) {
+      $this->continueOnExpectedWarnings(['PHP']);
+    }
   }
 
   /**
@@ -257,7 +276,7 @@ abstract class InstallerTestBase extends BrowserTestBase {
    */
   protected function setUpSite() {
     $edit = $this->translatePostValues($this->parameters['forms']['install_configure_form']);
-    $this->drupalPostForm(NULL, $edit, $this->translations['Save and continue']);
+    $this->submitForm($edit, $this->translations['Save and continue']);
     // If we've got to this point the site is installed using the regular
     // installation workflow.
     $this->isInstalled = TRUE;

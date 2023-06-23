@@ -15,6 +15,8 @@ use Drupal\Core\StreamWrapper\StreamWrapperManagerInterface;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
+// cspell:ignore rrggbb
+
 /**
  * Defines the GD2 toolkit for image manipulation within Drupal.
  *
@@ -28,7 +30,7 @@ class GDToolkit extends ImageToolkitBase {
   /**
    * A GD image resource.
    *
-   * @var resource|null
+   * @var resource|\GdImage|null
    */
   protected $resource = NULL;
 
@@ -98,6 +100,8 @@ class GDToolkit extends ImageToolkitBase {
    * Destructs a GDToolkit object.
    *
    * Frees memory associated with a GD image resource.
+   *
+   * @todo Remove the method for PHP 8.0+ https://www.drupal.org/node/3173031
    */
   public function __destruct() {
     if (is_resource($this->resource)) {
@@ -124,15 +128,20 @@ class GDToolkit extends ImageToolkitBase {
   /**
    * Sets the GD image resource.
    *
-   * @param resource $resource
+   * @param resource|\GdImage $resource
    *   The GD image resource.
    *
    * @return $this
    *   An instance of the current toolkit object.
    */
   public function setResource($resource) {
-    if (!is_resource($resource) || get_resource_type($resource) != 'gd') {
-      throw new \InvalidArgumentException('Invalid resource argument');
+    if (!(is_object($resource) && $resource instanceof \GdImage)) {
+      // Since PHP 8.0 resource should be \GdImage, for previous versions it
+      // should be resource.
+      // @TODO clean-up for PHP 8.0+ https://www.drupal.org/node/3173031
+      if (!is_resource($resource) || get_resource_type($resource) != 'gd') {
+        throw new \InvalidArgumentException('Invalid resource argument');
+      }
     }
     $this->preLoadInfo = NULL;
     $this->resource = $resource;
@@ -142,11 +151,12 @@ class GDToolkit extends ImageToolkitBase {
   /**
    * Retrieves the GD image resource.
    *
-   * @return resource|null
+   * @return resource|\GdImage|null
    *   The GD image resource, or NULL if not available.
    */
   public function getResource() {
-    if (!is_resource($this->resource)) {
+    // @TODO clean-up for PHP 8.0+ https://www.drupal.org/node/3173031
+    if (!(is_resource($this->resource) || (is_object($this->resource) && $this->resource instanceof \GdImage))) {
       $this->load();
     }
     return $this->resource;
@@ -158,12 +168,12 @@ class GDToolkit extends ImageToolkitBase {
   public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
     $form['image_jpeg_quality'] = [
       '#type' => 'number',
-      '#title' => t('JPEG quality'),
-      '#description' => t('Define the image quality for JPEG manipulations. Ranges from 0 to 100. Higher values mean better image quality but bigger files.'),
+      '#title' => $this->t('JPEG quality'),
+      '#description' => $this->t('Define the image quality for JPEG manipulations. Ranges from 0 to 100. Higher values mean better image quality but bigger files.'),
       '#min' => 0,
       '#max' => 100,
       '#default_value' => $this->configFactory->getEditable('system.image.gd')->get('jpeg_quality', FALSE),
-      '#field_suffix' => t('%'),
+      '#field_suffix' => $this->t('%'),
     ];
     return $form;
   }
@@ -248,8 +258,8 @@ class GDToolkit extends ImageToolkitBase {
       $success = $function($this->getResource(), $destination, $this->configFactory->get('system.image.gd')->get('jpeg_quality'));
     }
     else {
-      // Always save PNG images with full transparency.
-      if ($this->getType() == IMAGETYPE_PNG) {
+      // Image types that support alpha need to be saved accordingly.
+      if (in_array($this->getType(), [IMAGETYPE_PNG, IMAGETYPE_WEBP], TRUE)) {
         imagealphablending($this->getResource(), FALSE);
         imagesavealpha($this->getResource(), TRUE);
       }
@@ -385,14 +395,14 @@ class GDToolkit extends ImageToolkitBase {
 
     $info = gd_info();
     $requirements['version'] = [
-      'title' => t('GD library'),
+      'title' => $this->t('GD library'),
       'value' => $info['GD Version'],
     ];
 
     // Check for filter and rotate support.
     if (!function_exists('imagefilter') || !function_exists('imagerotate')) {
       $requirements['version']['severity'] = REQUIREMENT_WARNING;
-      $requirements['version']['description'] = t('The GD Library for PHP is enabled, but was compiled without support for functions used by the rotate and desaturate effects. It was probably compiled using the official GD libraries from http://www.libgd.org instead of the GD library bundled with PHP. You should recompile PHP --with-gd using the bundled GD library. See <a href="http://php.net/manual/book.image.php">the PHP manual</a>.');
+      $requirements['version']['description'] = $this->t('The GD Library for PHP is enabled, but was compiled without support for functions used by the rotate and desaturate effects. It was probably compiled using the official GD libraries from http://www.libgd.org instead of the GD library bundled with PHP. You should recompile PHP --with-gd using the bundled GD library. See <a href="http://php.net/manual/book.image.php">the PHP manual</a>.');
     }
 
     return $requirements;
@@ -459,7 +469,7 @@ class GDToolkit extends ImageToolkitBase {
    *   IMAGETYPE_* constant (e.g. IMAGETYPE_JPEG, IMAGETYPE_PNG, etc.).
    */
   protected static function supportedTypes() {
-    return [IMAGETYPE_PNG, IMAGETYPE_JPEG, IMAGETYPE_GIF];
+    return [IMAGETYPE_PNG, IMAGETYPE_JPEG, IMAGETYPE_GIF, IMAGETYPE_WEBP];
   }
 
 }

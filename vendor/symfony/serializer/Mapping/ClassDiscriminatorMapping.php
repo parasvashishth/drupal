@@ -23,6 +23,18 @@ class ClassDiscriminatorMapping
     {
         $this->typeProperty = $typeProperty;
         $this->typesMapping = $typesMapping;
+
+        uasort($this->typesMapping, static function (string $a, string $b): int {
+            if (is_a($a, $b, true)) {
+                return -1;
+            }
+
+            if (is_a($b, $a, true)) {
+                return 1;
+            }
+
+            return 0;
+        });
     }
 
     public function getTypeProperty(): string
@@ -41,7 +53,7 @@ class ClassDiscriminatorMapping
     public function getMappedObjectType($object): ?string
     {
         foreach ($this->typesMapping as $type => $typeClass) {
-            if (is_a($object, $typeClass)) {
+            if (is_a($object, $typeClass, true)) {
                 return $type;
             }
         }

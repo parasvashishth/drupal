@@ -35,7 +35,7 @@ class MenuActiveTrail403Test extends BrowserTestBase {
   /**
    * {@inheritdoc}
    */
-  public static $modules = ['system', 'block', 'menu_link_content'];
+  protected static $modules = ['system', 'block', 'menu_link_content'];
 
   /**
    * {@inheritdoc}
@@ -49,7 +49,7 @@ class MenuActiveTrail403Test extends BrowserTestBase {
     $this->drupalPlaceBlock(
       'system_menu_block:' . $this->menu,
       [
-       'level' => 2,
+        'level' => 2,
       ]
     );
 

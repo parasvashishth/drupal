@@ -2,14 +2,14 @@
 
 namespace Drupal\Tests\workspaces\Functional\EntityResource;
 
-use Drupal\Tests\rest\Functional\EntityResource\EntityResourceTestBase;
+use Drupal\Tests\rest\Functional\EntityResource\ConfigEntityResourceTestBase;
 use Drupal\user\Entity\User;
 use Drupal\workspaces\Entity\Workspace;
 
 /**
  * Base class for workspace EntityResource tests.
  */
-abstract class WorkspaceResourceTestBase extends EntityResourceTestBase {
+abstract class WorkspaceResourceTestBase extends ConfigEntityResourceTestBase {
 
   /**
    * {@inheritdoc}
@@ -162,16 +162,6 @@ abstract class WorkspaceResourceTestBase extends EntityResourceTestBase {
   /**
    * {@inheritdoc}
    */
-  protected function getSecondNormalizedPostEntity() {
-    $normalized_post_entity = $this->getNormalizedPostEntity();
-    $normalized_post_entity['id'][0]['value'] = static::$secondCreatedEntityId;
-
-    return $normalized_post_entity;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
   protected function getNormalizedPatchEntity() {
     return [
       'label' => [
@@ -191,7 +181,7 @@ abstract class WorkspaceResourceTestBase extends EntityResourceTestBase {
         return "The 'view any workspace' permission is required.";
 
       case 'POST':
-        return "The 'create workspace' permission is required.";
+        return "The following permissions are required: 'administer workspaces' OR 'create workspace'.";
 
       case 'PATCH':
         return "The 'edit any workspace' permission is required.";

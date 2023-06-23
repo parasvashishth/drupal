@@ -45,6 +45,13 @@ abstract class DateTimeHandlerTestBase extends ViewsKernelTestBase {
   protected $nodes = [];
 
   /**
+   * Column map.
+   *
+   * @var string[]
+   */
+  protected $map;
+
+  /**
    * {@inheritdoc}
    */
   protected function setUp($import_test_views = TRUE) {
@@ -83,7 +90,7 @@ abstract class DateTimeHandlerTestBase extends ViewsKernelTestBase {
     ];
 
     // Load test views.
-    ViewTestData::createTestViews(get_class($this), ['datetime_test']);
+    ViewTestData::createTestViews(static::class, ['datetime_test']);
   }
 
   /**

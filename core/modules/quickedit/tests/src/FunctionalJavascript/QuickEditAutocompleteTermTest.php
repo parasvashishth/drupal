@@ -14,6 +14,7 @@ use Drupal\Tests\field\Traits\EntityReferenceTestTrait;
  * Tests in-place editing of autocomplete tags.
  *
  * @group quickedit
+ * @group legacy
  */
 class QuickEditAutocompleteTermTest extends WebDriverTestBase {
 
@@ -72,7 +73,7 @@ class QuickEditAutocompleteTermTest extends WebDriverTestBase {
   protected $fieldName;
 
   /**
-   * An user with permissions to access in-place editor.
+   * A user with permissions to access in-place editor.
    *
    * @var \Drupal\user\UserInterface
    */

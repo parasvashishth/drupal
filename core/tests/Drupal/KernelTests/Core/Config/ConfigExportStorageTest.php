@@ -18,6 +18,9 @@ class ConfigExportStorageTest extends KernelTestBase {
    */
   protected static $modules = ['system', 'config_test'];
 
+  /**
+   * {@inheritdoc}
+   */
   protected function setUp(): void {
     parent::setUp();
     $this->installConfig(['system', 'config_test']);
@@ -40,13 +43,8 @@ class ConfigExportStorageTest extends KernelTestBase {
     }
 
     // Test that the export storage is read-only.
-    try {
-      $export->deleteAll();
-      $this->fail("export storage must not allow editing");
-    }
-    catch (\BadMethodCallException $exception) {
-      $this->pass("Exception is thrown.");
-    }
+    $this->expectException(\BadMethodCallException::class);
+    $export->deleteAll();
   }
 
 }

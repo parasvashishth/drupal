@@ -39,7 +39,7 @@ class TimezoneValidator extends ConstraintValidator
             return;
         }
 
-        if (!is_scalar($value) && !(\is_object($value) && method_exists($value, '__toString'))) {
+        if (!\is_scalar($value) && !(\is_object($value) && method_exists($value, '__toString'))) {
             throw new UnexpectedValueException($value, 'string');
         }
 
@@ -78,7 +78,11 @@ class TimezoneValidator extends ConstraintValidator
     private static function getPhpTimezones(int $zone, string $countryCode = null): array
     {
         if (null !== $countryCode) {
-            return @\DateTimeZone::listIdentifiers($zone, $countryCode) ?: [];
+            try {
+                return @\DateTimeZone::listIdentifiers($zone, $countryCode) ?: [];
+            } catch (\ValueError $e) {
+                return [];
+            }
         }
 
         return \DateTimeZone::listIdentifiers($zone);

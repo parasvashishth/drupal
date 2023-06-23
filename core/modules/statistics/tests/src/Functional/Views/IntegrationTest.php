@@ -3,7 +3,6 @@
 namespace Drupal\Tests\statistics\Functional\Views;
 
 use Drupal\Tests\views\Functional\ViewTestBase;
-use Drupal\views\Tests\ViewTestData;
 
 /**
  * Tests basic integration of views data from the statistics module.
@@ -34,6 +33,13 @@ class IntegrationTest extends ViewTestBase {
   protected $webUser;
 
   /**
+   * A test user with node viewing access only.
+   *
+   * @var \Drupal\user\Entity\User
+   */
+  protected $deniedUser;
+
+  /**
    * Stores the node object which is used by the test.
    *
    * @var \Drupal\node\Entity\Node
@@ -47,13 +53,17 @@ class IntegrationTest extends ViewTestBase {
    */
   public static $testViews = ['test_statistics_integration'];
 
-  protected function setUp($import_test_views = TRUE): void {
-    parent::setUp($import_test_views);
-
-    ViewTestData::createTestViews(get_class($this), ['statistics_test_views']);
+  /**
+   * {@inheritdoc}
+   */
+  protected function setUp($import_test_views = TRUE, $modules = ['statistics_test_views']): void {
+    parent::setUp($import_test_views, $modules);
 
     // Create a new user for viewing nodes and statistics.
-    $this->webUser = $this->drupalCreateUser(['access content', 'view post access counter']);
+    $this->webUser = $this->drupalCreateUser([
+      'access content',
+      'view post access counter',
+    ]);
 
     // Create a new user for viewing nodes only.
     $this->deniedUser = $this->drupalCreateUser(['access content']);
@@ -78,7 +88,7 @@ class IntegrationTest extends ViewTestBase {
     // Manually calling statistics.php, simulating ajax behavior.
     // @see \Drupal\statistics\Tests\StatisticsLoggingTest::testLogging().
     global $base_url;
-    $stats_path = $base_url . '/' . drupal_get_path('module', 'statistics') . '/statistics.php';
+    $stats_path = $base_url . '/' . $this->getModulePath('statistics') . '/statistics.php';
     $client = $this->getHttpClient();
     $client->post($stats_path, ['form_params' => ['nid' => $this->node->id()]]);
     $this->drupalGet('test_statistics_integration');

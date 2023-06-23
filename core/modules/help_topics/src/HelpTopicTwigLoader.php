@@ -2,6 +2,7 @@
 
 namespace Drupal\help_topics;
 
+use Drupal\Component\FrontMatter\FrontMatter;
 use Drupal\Component\Serialization\Exception\InvalidDataTypeException;
 use Drupal\Core\Extension\ModuleHandlerInterface;
 use Drupal\Core\Extension\ThemeHandlerInterface;
@@ -77,14 +78,14 @@ class HelpTopicTwigLoader extends FilesystemLoader {
       // "serializer.yaml" service. This allows the core serializer to utilize
       // core related functionality which isn't available as the standalone
       // component based serializer.
-      $front_matter = FrontMatter::load($contents, Yaml::class);
+      $front_matter = new FrontMatter($contents, Yaml::class);
 
       // Reconstruct the content if there is front matter data detected. Prepend
       // the source with {% line \d+ %} to inform Twig that the source code
       // actually starts on a different line past the front matter data. This is
       // particularly useful when used in error reporting.
       if ($front_matter->getData() && ($line = $front_matter->getLine())) {
-        $contents = "{% line $line %}" . $front_matter->getCode();
+        $contents = "{% line $line %}" . $front_matter->getContent();
       }
     }
     catch (InvalidDataTypeException $e) {
@@ -92,6 +93,20 @@ class HelpTopicTwigLoader extends FilesystemLoader {
     }
 
     return new Source($contents, $name, $path);
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  protected function findTemplate($name, $throw = TRUE) {
+    if (!str_ends_with($name, '.html.twig')) {
+      if (!$throw) {
+        return NULL;
+      }
+      $extension = pathinfo($name, PATHINFO_EXTENSION);
+      throw new LoaderError(sprintf("Help topic %s has an invalid file extension (%s). Only help topics ending .html.twig are allowed.", $name, $extension));
+    }
+    return parent::findTemplate($name, $throw);
   }
 
 }

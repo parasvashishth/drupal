@@ -30,11 +30,13 @@ abstract class TokenReplaceKernelTestBase extends EntityKernelTestBase {
    */
   protected static $modules = ['system'];
 
+  /**
+   * {@inheritdoc}
+   */
   protected function setUp() {
     parent::setUp();
     // Install default system configuration.
     $this->installConfig(['system']);
-    \Drupal::service('router.builder')->rebuild();
 
     $this->interfaceLanguage = \Drupal::languageManager()->getCurrentLanguage();
     $this->tokenService = \Drupal::token();

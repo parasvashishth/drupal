@@ -2,14 +2,12 @@ name: Umami
 type: theme
 base theme: false
 description: 'The theme used for the Umami food magazine demonstration site.'
-# version: VERSION
+version: VERSION
 libraries:
   - umami/classy.base
   - core/normalize
   - umami/global
   - umami/messages
-  - umami/webfonts-open-sans
-  - umami/webfonts-scope-one
 
 libraries-override:
   layout_builder/twocol_section:
@@ -48,6 +46,8 @@ libraries-extend:
     - umami/classy.media_library
   user/drupal.user:
     - umami/user
+  node/drupal.node.preview:
+    - umami/drupal.node.preview
 
 regions:
   pre_header: Pre-header
@@ -64,11 +64,3 @@ regions:
   bottom: Bottom
   page_top: 'Page top' # Needed by Drupal Core
   page_bottom: 'Page bottom' # Needed by Drupal Core
-
-ckeditor_stylesheets:
-  - css/classy/components/media-embed-error.css
-
-# Information added by Drupal.org packaging script on 2020-06-03
-version: '9.0.0'
-project: 'drupal'
-datestamp: 1591221734

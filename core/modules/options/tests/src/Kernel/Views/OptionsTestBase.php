@@ -48,11 +48,14 @@ abstract class OptionsTestBase extends ViewsKernelTestBase {
    */
   protected $fieldNames;
 
+  /**
+   * {@inheritdoc}
+   */
   protected function setUp($import_test_views = TRUE) {
     parent::setUp();
     $this->mockStandardInstall();
 
-    ViewTestData::createTestViews(get_class($this), ['options_test_views']);
+    ViewTestData::createTestViews(static::class, ['options_test_views']);
 
     $settings = [];
     $settings['type'] = 'article';

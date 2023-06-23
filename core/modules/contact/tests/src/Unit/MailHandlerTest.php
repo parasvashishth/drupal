@@ -86,11 +86,11 @@ class MailHandlerTest extends UnitTestCase {
 
     $this->languageManager->expects($this->any())
       ->method('getDefaultLanguage')
-      ->will($this->returnValue($language));
+      ->willReturn($language);
 
     $this->languageManager->expects($this->any())
       ->method('getCurrentLanguage')
-      ->will($this->returnValue($language));
+      ->willReturn($language);
   }
 
   /**
@@ -144,7 +144,7 @@ class MailHandlerTest extends UnitTestCase {
           $this->assertEquals($key, $result['key']);
           $this->assertEquals($to, $result['to']);
           $this->assertEquals($langcode, $result['langcode']);
-          $this->assertArrayEquals($params, $result['params']);
+          $this->assertEquals($params, $result['params']);
           $this->assertEquals($from, $result['from']);
         });
     $this->userStorage->expects($this->any())

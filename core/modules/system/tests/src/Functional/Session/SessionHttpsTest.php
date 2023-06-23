@@ -87,12 +87,12 @@ class SessionHttpsTest extends BrowserTestBase {
 
     // Verify that user is logged in on secure URL.
     $this->drupalGet($this->httpsUrl('admin/config'));
-    $this->assertText(t('Configuration'));
+    $this->assertSession()->pageTextContains('Configuration');
     $this->assertSession()->statusCodeEquals(200);
 
     // Verify that user is not logged in on non-secure URL.
     $this->drupalGet($this->httpUrl('admin/config'));
-    $this->assertNoText(t('Configuration'));
+    $this->assertSession()->pageTextNotContains('Configuration');
     $this->assertSession()->statusCodeEquals(403);
 
     // Verify that empty SID cannot be used on the non-secure site.
@@ -159,7 +159,12 @@ class SessionHttpsTest extends BrowserTestBase {
 
     // Follow the location header.
     $path = $this->getPathFromLocationHeader($response, FALSE);
-    $this->drupalGet($this->httpUrl($path));
+    $parsed_path = parse_url($path);
+    $query = [];
+    if (isset($parsed_path['query'])) {
+      parse_str($parsed_path['query'], $query);
+    }
+    $this->drupalGet($this->httpUrl($parsed_path['path']), ['query' => $query]);
     $this->assertSession()->statusCodeEquals(200);
   }
 
@@ -205,7 +210,12 @@ class SessionHttpsTest extends BrowserTestBase {
 
     // Follow the location header.
     $path = $this->getPathFromLocationHeader($response, TRUE);
-    $this->drupalGet($this->httpsUrl($path));
+    $parsed_path = parse_url($path);
+    $query = [];
+    if (isset($parsed_path['query'])) {
+      parse_str($parsed_path['query'], $query);
+    }
+    $this->drupalGet($this->httpsUrl($parsed_path['path']), ['query' => $query]);
     $this->assertSession()->statusCodeEquals(200);
   }
 
@@ -242,22 +252,17 @@ class SessionHttpsTest extends BrowserTestBase {
   }
 
   /**
-   * Test that there exists a session with two specific session IDs.
+   * Tests that there exists a session with two specific session IDs.
    *
-   * @param $sid
+   * @param string $sid
    *   The insecure session ID to search for.
-   * @param $assertion_text
+   * @param string $assertion_text
    *   The text to display when we perform the assertion.
    *
-   * @return
-   *   The result of assertTrue() that there's a session in the system that
-   *   has the given insecure and secure session IDs.
+   * @internal
    */
-  protected function assertSessionIds($sid, $assertion_text) {
-    $args = [
-      ':sid' => Crypt::hashBase64($sid),
-    ];
-    return $this->assertNotEmpty(\Drupal::database()->query('SELECT timestamp FROM {sessions} WHERE sid = :sid', $args)->fetchField(), $assertion_text);
+  protected function assertSessionIds(string $sid, string $assertion_text): void {
+    $this->assertNotEmpty(\Drupal::database()->select('sessions', 's')->fields('s', ['timestamp'])->condition('sid', Crypt::hashBase64($sid))->execute()->fetchField(), $assertion_text);
   }
 
   /**
@@ -266,7 +271,7 @@ class SessionHttpsTest extends BrowserTestBase {
    * @param $url
    *   A Drupal path such as 'user/login'.
    *
-   * @return
+   * @return string
    *   URL prepared for the https.php mock front controller.
    */
   protected function httpsUrl($url) {
@@ -279,7 +284,7 @@ class SessionHttpsTest extends BrowserTestBase {
    * @param $url
    *   A Drupal path such as 'user/login'.
    *
-   * @return
+   * @return string
    *   URL prepared for the http.php mock front controller.
    */
   protected function httpUrl($url) {

@@ -89,8 +89,7 @@ class SessionTestController extends ControllerBase {
   }
 
   /**
-   * Turns off session saving and then tries to save a value
-   * anyway.
+   * Turns off session saving and then tries to save a value anyway.
    *
    * @param string $test_value
    *   A session value.
@@ -124,7 +123,7 @@ class SessionTestController extends ControllerBase {
    * @return string
    *   A notification message.
    */
-  public function setMessageButDontSave() {
+  public function setMessageButDoNotSave() {
     \Drupal::service('session_handler.write_safe')->setSessionWritable(FALSE);
     $this->setMessage();
     return ['#markup' => ''];

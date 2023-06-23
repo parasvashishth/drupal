@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Contains \Drupal.
- */
-
 use Drupal\Core\DependencyInjection\ContainerNotInitializedException;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -80,10 +75,20 @@ class Drupal {
   /**
    * The current system version.
    */
-  const VERSION = '9.0.0';
+  const VERSION = '9.5.9';
 
   /**
    * Core API compatibility.
+   *
+   * This constant is set to '8.x' to provide legacy compatibility with
+   * extensions that use the '8.x-' prefix to denote Drupal core major version
+   * compatibility, for example '8.x-1.0'. These extensions can specify
+   * compatibility with multiple major versions of Drupal core by setting the
+   * version constraint in 'core_version_requirement'. Drupal does not support
+   * using this core major version number prefix with versions greater than 8.
+   * For example '9.x-' prefixed extensions are not supported.
+   *
+   * @todo Remove or rename this constant in https://www.drupal.org/i/3085662
    */
   const CORE_COMPATIBILITY = '8.x';
 
@@ -93,9 +98,55 @@ class Drupal {
   const CORE_MINIMUM_SCHEMA_VERSION = 8000;
 
   /**
+   * Minimum supported version of PHP.
+   *
+   * @deprecated in drupal:9.4.0 and is removed from drupal:10.0.0. Use
+   *   \Drupal\Core\Utility\PhpRequirements::getMinimumSupportedPhp() instead.
+   *
+   * @see https://www.drupal.org/node/3261451
+   */
+  const MINIMUM_SUPPORTED_PHP = '7.4.0';
+
+  /**
+   * Minimum allowed version of PHP for Drupal to be bootstrapped.
+   *
+   * Below this version:
+   * - The installer cannot be run.
+   * - Updates cannot be run.
+   * - Modules and themes cannot be enabled.
+   * - If a site managed to bypass all of the above, then an error is shown in
+   *   the status report and various fatal errors occur on various pages.
+   *
+   * Note: To prevent the installer from having fatal errors on older versions
+   * of PHP, the value of this constant is hardcoded twice in core/install.php:
+   * - Once as a parameter of version_compare()
+   * - Once in the error message printed to the user immediately after.
+   * Remember to update both whenever this constant is updated.
+   */
+  const MINIMUM_PHP = '7.3.0';
+
+  /**
+   * Minimum recommended value of PHP memory_limit.
+   *
+   * 64M was chosen as a minimum requirement in order to allow for additional
+   * contributed modules to be installed prior to hitting the limit. However,
+   * 40M is the target for the Standard installation profile.
+   */
+  const MINIMUM_PHP_MEMORY_LIMIT = '64M';
+
+  /**
+   * Minimum recommended version of PHP.
+   *
+   * Sites installing Drupal on PHP versions lower than this will see a warning
+   * message, but Drupal can still be installed. Used for (e.g.) PHP versions
+   * that have reached their EOL or will in the near future.
+   */
+  const RECOMMENDED_PHP = '8.1.6';
+
+  /**
    * The currently active container object, or NULL if not initialized yet.
    *
-   * @var \Symfony\Component\DependencyInjection\ContainerInterface|null
+   * @var \Drupal\Component\DependencyInjection\ContainerInterface|null
    */
   protected static $container;
 
@@ -119,7 +170,7 @@ class Drupal {
   /**
    * Returns the currently active global container.
    *
-   * @return \Symfony\Component\DependencyInjection\ContainerInterface
+   * @return \Drupal\Component\DependencyInjection\ContainerInterface
    *
    * @throws \Drupal\Core\DependencyInjection\ContainerNotInitializedException
    */
@@ -524,10 +575,10 @@ class Drupal {
   }
 
   /**
-   * Returns the url generator service.
+   * Returns the URL generator service.
    *
    * @return \Drupal\Core\Routing\UrlGeneratorInterface
-   *   The url generator service.
+   *   The URL generator service.
    */
   public static function urlGenerator() {
     return static::getContainer()->get('url_generator');

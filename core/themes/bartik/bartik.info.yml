@@ -13,10 +13,12 @@
 # changes.
 name: Bartik
 type: theme
+lifecycle: deprecated
+lifecycle_link: https://www.drupal.org/node/3223395#s-bartik
 base theme: false
 description: 'A flexible, recolorable theme with many regions and a responsive, mobile-first layout.'
 package: Core
-# version: VERSION
+version: VERSION
 libraries:
   - bartik/classy.base
   - bartik/classy.messages
@@ -42,6 +44,8 @@ libraries-extend:
     - bartik/classy.media_library
   media_library/widget:
     - bartik/classy.media_library
+  tour/tour:
+    - bartik/tour
   user/drupal.user:
     - bartik/user
 
@@ -71,8 +75,3 @@ regions:
   footer_third: 'Footer third'
   footer_fourth: 'Footer fourth'
   footer_fifth: 'Footer fifth'
-
-# Information added by Drupal.org packaging script on 2020-06-03
-version: '9.0.0'
-project: 'drupal'
-datestamp: 1591221734

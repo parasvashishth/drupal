@@ -73,8 +73,8 @@ class AggregatorController extends ControllerBase {
     if ($items) {
       $build['items'] = $this->entityTypeManager()->getViewBuilder('aggregator_item')
         ->viewMultiple($items, 'default');
-      $build['pager'] = ['#type' => 'pager'];
     }
+    $build['pager'] = ['#type' => 'pager'];
     return $build;
   }
 
@@ -125,7 +125,7 @@ class AggregatorController extends ControllerBase {
         $next_update = $this->t('imminently');
       }
       elseif ($last_checked && $refresh_rate) {
-        $next_update = $next = $this->t('%time left', ['%time' => $this->dateFormatter->formatInterval($last_checked + $refresh_rate - REQUEST_TIME)]);
+        $next_update = $this->t('%time left', ['%time' => $this->dateFormatter->formatInterval($last_checked + $refresh_rate - REQUEST_TIME)]);
       }
       else {
         $next_update = $this->t('never');

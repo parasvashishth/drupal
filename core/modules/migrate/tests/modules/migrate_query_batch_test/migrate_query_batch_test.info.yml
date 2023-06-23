@@ -4,8 +4,3 @@ description: 'Provides a database table and records for SQL import with batch te
 package: Testing
 dependencies:
   - drupal:migrate
-
-# Information added by Drupal.org packaging script on 2020-06-03
-version: '9.0.0'
-project: 'drupal'
-datestamp: 1591221734
