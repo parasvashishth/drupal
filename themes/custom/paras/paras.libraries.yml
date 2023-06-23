@@ -1,0 +1,25 @@
+global:
+  css:
+    component: 
+      assets/css/bootstrap.min.css: {}
+      assets/fonts/fonts.css: {}
+      assets/css/header.css: {}
+      assets/css/owl.carousel.min.css: {}
+      assets/css/owl.theme.default.min.css: {}
+      assets/css/style.css: {}
+      assets/css/responsive.css: {}
+  js:
+    assets/js/bootstrap.bundle.min.js: {}
+    assets/js/fontawesome.js: {}
+    assets/js/header.js: {}
+    assets/js/jquery.min.js: {}
+    assets/js/owl.carousel.min.js: {}
+    assets/js/script.js: {}
+
+
+
+
+
+
+
+

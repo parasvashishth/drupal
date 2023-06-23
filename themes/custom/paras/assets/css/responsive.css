@@ -1,0 +1,907 @@
+@media (min-width: 576px){
+    #post-654{
+        max-width: 540px;
+        margin: 0 auto;
+    }
+    }
+    
+    @media (min-width: 768px){
+    #post-654{
+        max-width: 720px;
+        margin: 0 auto;
+    }
+        
+    }
+    
+    @media (min-width: 992px){
+    #post-654{
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    }
+    
+    @media (min-width: 1200px){
+    #post-654{
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 50px 0;
+    }
+    }
+    
+    @media (min-width: 1400px){
+    #post-654{
+        max-width: 1320px;
+        margin: 0 auto;
+    }
+    }
+    
+    @media (min-width: 992px){
+    .submenu-indicator {
+        margin-left: 0;
+    /*     margin-top: 40px; */
+    }
+    }
+    
+    @media(max-width:1399px){
+        .nav-search-button {
+            width: 30px;
+            height: 45px;
+            line-height: 50px;
+        }
+        .nav-search-button input {
+            display: none;
+        }
+        .sdirector_box .owl-carousel .owl-nav {
+        top: 68%;
+    }
+        .fsOuter .owl-dots {
+        top: 59%;
+    }
+        .mis_box {
+        min-height: 345px;
+    }
+        .banner_content {
+        margin-top: 180px;
+    }
+        .banner_sec::after {
+        height: 300px;
+    }
+        .banner_content {
+        margin-top: 100px;
+    }
+        .highway {
+        padding-bottom: 0;
+    }
+        .build_together {
+        margin-bottom: 0;
+        padding-bottom: 100px;
+        padding-top: 100px;
+    }
+        .banner_left h1 {
+        font-size: 60px;
+        line-height: 70px;
+    }
+        .banner_sec {
+        height: 650px;
+    }
+    
+        .group_left h1 {
+        font-size: 54px;
+    }
+        .fsOuter h1 {
+        font-size: 60px;
+    }
+        .fsOuter p {
+        font-size: 30px;
+        line-height: 40px;
+    }
+        .facility01Cont h2 {
+        font-size: 42px;
+        line-height: 52px;
+        margin-bottom: 15px;
+    }
+        .facility01Cont span {
+        padding-top: 20px;
+    }
+        .facility01Cont {
+        padding: 40px 40px 40px 40px;
+    }
+        .sProdPgImg .owl-nav .owl-next {
+         right: -60px;
+      }
+        .sProdPgImg .owl-nav .owl-prev {
+         right: -60px;
+      }
+        .sProdPgImg .owl-prev:before {
+        right: -6px;
+    }
+    }
+    
+    @media(max-width: 1199px){
+        section {
+        position: relative;
+        padding: 70px 0;
+    }
+        .nav-menu > li > a {
+        padding: 35px 5px 35px 12px;
+    }
+        .header_logo svg {
+        width: 100px;
+    }
+        .onhighway.line:before {
+        width: 280px;
+        right: calc(0% - 140px);
+    }
+        .onhighway h2 {
+        font-size: 52px;
+        line-height: 62px;
+    }
+        .opportunity_left {
+        padding-right: 0px;
+    }
+        .opportunity_left h3 {
+        font-size: 28px;
+        line-height: 38px;
+        margin-bottom: 30px;
+    }
+        .trusted_brands .owl-dots {
+        display: none;
+    }
+        .trusted_brands .owl-nav {
+        display: none;
+    }
+        .misHead h2 {
+        font-size: 40px;
+    }
+        .misContent p {
+        font-size: 20px;
+    }
+        .board_right > h4 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+        .mis_box {
+        min-height: 100%;
+    }
+        .group_left h1 {   
+        margin-bottom: 35px; 
+    }
+        .group_left p {
+        font-size: 17px;
+    }
+        .groupBoxLeft h3 {
+        font-size: 27px;
+    }
+        .groupBoxLeft ul li {
+            font-size: 20px;
+    }
+        .groupBoxSec img{width:auto;}
+        
+        .mergers_cont h1 {
+        font-size: 55px;
+        line-height: 68px;
+        margin: 0 auto 70px;
+    }
+        .merger_left h4 {
+            font-size: 25px;
+            line-height: 30px;
+    }
+        .mergers .merger_left .accordion-item .accordion-button {
+        font-size: 17px; 
+    }
+        .facility01Cont h2 {
+        font-size: 32px;
+        line-height: 42px;
+    }
+        .fsOuter p {
+        font-size: 26px;
+        line-height: 36px;
+    }
+        .fsOuter h1 {
+        font-size: 52px;
+    }
+        .onHighHead {
+        font-size: 62px;
+        line-height: 72px;
+    }
+    .newsPageowlInnerCont:after {
+        width: 80%;
+      }
+    .sProdPgImgPop {
+        margin-right: 40px;
+        padding: 0px 20px;
+    }
+        .careerRight img{
+        width: 100%;
+    }
+        .locationBox {
+        width: 100%;
+        height: 100%;
+    }
+    .collaborateInnerRight {
+        position: relative;
+    }
+    
+    }
+    
+    
+    @media(max-width: 991px){
+        section{
+            padding: 70px 0;
+    }	
+        .merger_left.sProdRt.techSpec > h1 {
+        font-size: 30px;
+    }
+        .nav-toggle:before {
+        background-color: #000;
+        box-shadow: 0 0.5em 0 0 #000, 0 1em 0 0 #000;
+    }
+        .banner_content {
+        margin-top: 100px;
+    }
+        .banner_left {
+        width: 75%;
+    }
+        .banner_left p {
+        font-size: 20px;
+        line-height: 30px;
+        color: #fff;
+    }
+        .banner_right span {
+        font-size: 16px;
+        line-height: 25px;
+    }
+        .banner_content {
+        margin-top: 100px;
+    }
+        .banner_left h1 {
+        font-size: 42px;
+        line-height: 52px;
+    }
+        .banner_sec {
+        height: 500px;
+    }
+        .onhighway.line:before {
+        top: 50px;
+    }
+        .onhighway.line:before {
+        width: 170px;
+        right: calc(0% - 100px);
+    }
+        .onhighway h2 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+        .news_box {
+        margin-bottom: 40px;
+    }
+        .news_media .row {
+        justify-content: center;
+    }
+        .news_media .row {
+        padding-bottom: 40px;
+    }
+        .build_together {
+        padding-bottom: 40px;
+        padding-top: 40px;
+    }
+        .build_head {
+        width: 100%;
+    }
+        .build_head_img img {
+        width: 100%;
+    }
+        section.build_together .row {
+        align-items: center;
+    }
+        .build_head h2 {
+        font-size: 36px;
+        line-height: 46px;
+        margin-bottom: 20px;
+    }
+        .build_head p {
+        font-size: 15px;
+        line-height: 25px;
+        margin-bottom: 30px;
+    }
+        .news_media {
+        padding-bottom: 30px;
+    }
+        .quick_link h3 {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+        .small_video {
+        width: 100%;
+        height: 100%;
+    }
+        .header:hover .nav-toggle:before {
+        background-color: #000;
+        box-shadow: 0 0.5em 0 0 #000000, 0 1em 0 0 #000000;
+    }
+        .nav-search {
+        display: none;
+    }
+        .about_content {
+        width: 100%;
+    }
+        .about {
+        padding-top: 70px;
+    }
+        .shape.shape3 {
+        top: 260px;
+    }
+        .historyCont {
+        padding: 70px 0;
+    }
+        .misHead h2 {
+        font-size: 35px;
+    }
+        .misContent p {
+        font-size: 16px;
+    }
+        .mvpage .col-md-6 {
+        margin-bottom: 25px;
+    }
+        .mis_box {
+        min-height: 100%;
+    }
+        .board_right > h4 {
+        font-size: 20px;
+        line-height: 33px;
+    }
+        .group_left h1 {
+            margin-bottom: 35px;
+    }
+        .group_left p {
+        font-size: 17px;
+    }
+        .groupBoxLeft h3 {
+        font-size: 26px;
+    }
+        .groupBoxLeft ul li {
+            font-size: 18px;
+    }
+        .groupBoxSec img{
+            width: 100%;
+        }
+        .mergers_cont h1 {   
+        font-size: 55px;
+        line-height: 65px;
+    }
+        .merger_left h4 {
+        font-size: 28px;
+    }
+        .automotive__cont ul li {
+        width: 33.33333%;
+        margin-bottom: 20px;
+    }
+        .news_content h4 {
+        font-size: 19px;
+        line-height: 30px;
+    }
+        .ct_left ul li {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+        ul.nav-menu > li > .submenu-indicator {
+        margin-top: 0;
+    }
+        .bannerSubCatCont h2 {
+        font-size: 37px;
+    }	
+        .milestones ul li:nth-child(odd) .mileCont {
+        padding-right: 30px;
+    }
+        .milestones ul li:nth-child(even) .mileCont {
+        padding-left: 30px;
+    }
+        .mileCont h2 {
+        font-size: 42px;
+    }
+        .mileCont h4 {
+        width: 100%;
+    }
+        .mileCont p {
+        width: 100%;
+    }
+        .sProdPgImg .owl-carousel button, .sProdPgImg .owl-carousel button.owl-dot {
+        margin: 0px 0px 0px 0px;
+    }
+        .collaborateOuter {
+        flex-direction: column-reverse;
+    }
+        .collaborateInnerRight img {
+        height: auto;
+    }
+        .collaborateInnerLeft {
+        width: 100%;
+    }
+        .collaborateInnerRight {
+        width: 100%;
+    }
+    .wareHouse {
+        margin-bottom: 0px;
+    }
+    }
+    
+    @media(max-width: 767px){
+        .onhighway h2 {
+        font-size: 38px;
+        line-height: 48px;
+    }
+    
+        .footer_copyright {
+        margin-bottom: 20px;
+    }
+        .quick_link h3 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+        .quick_link ul li a {
+        font-size: 13px;
+        margin-bottom: 0px;
+    }
+        .quick_link {
+        margin-bottom: 20px;
+    }
+        .footer_right h3 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+        .footer {
+        padding: 70px 0;
+    }
+        .mission_three .nav-tabs {   
+        width: 100%;
+    }
+        .mis_hist_cont {
+        padding-top: 50px;
+    }
+        .misHead h2 {
+        font-size: 30px;
+    }
+        .misContent p {
+        font-size: 14px;
+    }
+        .vision_box {
+        margin-bottom: 1rem;
+    }
+        .board_right > h4 {
+        font-size: 18px;
+        line-height: 30px;
+    }
+        .group_left h1 {
+            margin-bottom: 35px;}
+        .group_left p {
+        font-size: 17px;
+    }
+        .groupBoxLeft h3 {
+        font-size: 25px;
+    }
+        .groupBoxLeft ul li {
+            font-size: 20px;
+    }
+        .mergers_cont h1 {   
+        font-size: 65px;
+        line-height: 75px;
+    }
+        .banner_content {
+        margin-top: 45px;
+    }
+        .onhighway h2 {
+        font-size: 30px;
+    }
+        .onhighway.line:before {
+        top: 40px;
+    }
+        .trusted_brands .row {
+        padding-bottom: 80px;
+    }
+        .automotive__cont .auto_box {  
+        margin-right: 0px;  
+    }
+        .automotive__cont ul li {
+            width: 48%;
+            margin-right: 20px;
+    }
+        .automotive__cont ul li:nth-child(even) {
+        margin-right: 0px;
+    }
+        section {
+        padding: 50px 0;
+    }
+        .ct_left > h1 {
+        margin-bottom: 3rem;
+    }
+        .cright h4 {
+        margin-bottom: 3rem;
+    }
+        bannerSubCat {
+        padding: 120px 0;
+    }
+        .bannerSubCatCont h2 {
+            font-size: 27px;
+    }
+        .text-center {
+        font-size: 34px;
+    }
+            .sProdPgImg {
+        display: block;
+    }
+        .image-gallery {
+        display: none;
+    }
+        .facility01 {
+        flex-direction: column;
+    }
+        .facility01Img {
+        width: 100%;
+    }
+        .facility01Cont {
+        width: 100%;
+    }
+        .facility01Img img {
+        height: auto;
+    }
+        .facility01:nth-child(even) {
+        flex-direction: column;
+        margin-left: 0;
+    }
+        .facility01:nth-child(odd) {
+        margin-right: 0;
+    }
+        .facility01:last-of-type {
+        padding-bottom: 50px;
+    }
+        .onHighHead {
+        font-size: 42px;
+        line-height: 52px;
+    }
+        .sProdPgImgPop {
+        margin-right: 0;
+        padding: 0px 20px;
+    }
+        .row.counterAb {
+        margin: 0;
+        width: 100%;
+        margin-top: 28px;
+    }
+        .aboutUsLeft {
+        margin-bottom: 30px;
+    }
+        .aboutUsLeft h3 {
+        font-size: 28px;
+    }
+        .aboutRightBox .aboutRightBoxImg {
+        margin-right: 15px;
+    }
+        .hearTop h2 {
+        font-size: 38px;
+        margin-bottom: 15px;
+    }
+        .contactBox h3 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    }
+    
+    @media(max-width: 575px){
+        section {
+        padding: 50px 0;
+    }
+        .about {
+        padding-top: 50px;
+    }
+        .banner_left {
+        width: 100%;
+    }
+        .banner_left h1 {
+        font-size: 32px;
+        line-height: 42px;
+    }
+        .banner_left p {
+        font-size: 17px;
+        line-height: 30px;
+    }
+        .banner_right span {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    /* 	.banner_right {
+        right: 10px;
+        width: 65px;
+        height: 65px;
+        top: calc(50% - 70px);
+    } */
+        .banner_sec {
+        height: 420px;
+    }
+        .onhighway h2 {
+        font-size: 26px;
+        line-height: 36px;
+    }
+        .onhighway.line:before {
+        width: 200px;
+        right: calc(0% - 105px);
+    }
+        .counter-numbers p {
+        width: 100%;
+    }
+        .footer {
+        padding: 50px 0;
+    }
+        .opportunity_left h3 {
+        font-size: 24px;
+        line-height: 34px;
+        margin-bottom: 25px;
+    }
+        .shape.shape1 img {
+        width: 100%;
+    }
+        .shape.shape2 {
+        top: 200px;
+    }
+        .shape.shape3 {
+        top: 400px;
+            display: none;
+    }
+        .counter-numbers .counters {
+        font-size: 36px;
+        line-height: 46px;
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+        .counters .counting {
+        font-size: 36px;
+        line-height: 46px;
+        font-weight: 600;
+    }
+        .news_img {
+        margin-bottom: 20px;
+    }
+        .mission_three .nav-tabs {
+        height: auto;
+    }
+        
+        .mission_three > nav {
+        background: #fff;
+    }
+        
+        .mission_three .nav-tabs .nav-link {
+        width: 100%;
+        margin-bottom: 10px;
+        background: #D9D9D9;
+    }
+        .mission_three .nav-tabs .nav-link:last-child {
+        margin-bottom: 0;
+    }
+    
+        
+        .mission_three .nav-tabs .nav-link.active {
+            margin-bottom: 10px;
+    }
+        .board_right > h4 {
+        font-size: 17px;
+        line-height: 30px;
+    }
+        .coreValuesPageSec {
+        padding: 50px 0;
+    }
+        .mission_three .nav-link.active:before {
+            display:none;
+    }
+        .group_left h1 {
+        font-size: 35px;
+        margin-bottom: 35px;
+        line-height: 40px;
+    }
+        .group_left p {
+        font-size: 17px;
+    }
+        .groupBoxLeft h3 {
+        font-size: 22px;
+    }
+        .groupBoxLeft ul li {
+            font-size: 17px;
+    }
+        .groupBoxRt img {
+           width: auto;
+           margin-top: 12px;
+    }
+        .mergers_cont h1 {
+        font-size: 26px;
+        line-height: 36px;
+        margin: 0px auto 50px;
+        text-align:left;
+        width: 100%;
+    }
+        .merger_left h4 {
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .mergers .merger_left .accordion-item .accordion-button {
+        font-size: 17px;
+    }
+        .mergers p {
+        font-size: 15px;
+    }
+        .banner_sec {
+        height: 469px;
+    }
+        .btn_imperial {   
+        padding: 10px 27px;
+    }
+        .banner_content {
+        margin-top: 70px;
+    }
+        .build_together {
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+    .onhighway h2 {
+        font-size: 18px;
+        line-height: 28px;
+    }
+        .onhighway.line h2 {
+        margin-right: 5%;
+    }
+        .onhighway.line2 h2 {
+        margin-left: 0%;
+    }
+        .onhighway.line:before {
+        width: 40px;
+        right: calc(0% - 30px);
+    }
+        .onhighway.line:before {
+        top: 30px;
+    }
+    /* 	.trusted_brands .row {
+        padding-bottom: 50px;
+    } */
+        .onhighway.line:before {   
+        height: 5px;   
+    }
+        .automotive__cont ul li {
+        width: 100%;
+        margin-right: 0;
+    }
+        .onHighHead {
+        font-size: 35px;
+        line-height: 45px;
+    }
+        .onHighHead_cont .nav-link {
+        width: 100%;
+    }
+        .onHighHead_cont .nav-link {
+        margin-bottom: 10px;
+    }
+        .onHighwayP:after {
+        width: 335px;
+    }
+         .onHighHead_cont .nav-link {
+        width: 55%;
+    }
+        .products {
+        padding-bottom: 0px;
+    }
+        .contact_select select {    
+        margin-bottom: 30px;
+    }
+        .c_field input, .c_field select, .c_field textarea {   
+            margin-bottom: 2rem;
+    }
+        .addressBox {
+        margin: 40px 0;
+    }
+        .vision_box {
+        justify-content: center;
+    }
+        .mis_hist_cont .row {
+        margin-bottom: 10px;
+    }
+        .career-content {
+        width: 100%;
+    }
+        .career-form {
+        width: 100%;
+    }
+    
+        .bannerSubCatCont h2 {
+        width: 100%;
+    }
+        .bannerSubCat {
+        padding: 100px 0;
+    }
+        .breadUl li {
+        font-size: 15px;
+    }
+        .build_head h2 {
+        font-size: 28px;
+        line-height: 38px;
+    }
+        .board_left h4 {
+        margin-bottom: 20px;
+    }
+        .cmap iframe {
+        width: 100%;
+    }
+    .milestones ul li {
+        width: 100%;
+        border-bottom: 1px solid #fff;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+    }
+        .milestones ul:before {
+        width: 0;
+    }
+        .milestones ul li:after {
+        width: 0;
+    }
+        .milestones ul li:nth-child(odd) .mileCont {
+        padding-right: 0;
+    }
+        .milestones ul li:nth-child(odd) {
+        text-align: left;
+    }
+        .milestones ul li:nth-child(odd) .mileCont p {
+        width: 100% ;
+    }
+        .milestones ul li:nth-child(even) .mileCont {
+        padding-left: 0;
+    }
+        .historyCont {
+        padding: 50px 0;
+    }
+        .misContent p {
+        font-size: 17px;
+        line-height: 28px;
+    }
+        .fsOuter p {
+        font-size: 22px;
+        line-height: 32px;
+    }
+        .fsOuter h1 {
+        font-size: 42px;
+    }
+    .facility01Cont {
+        padding: 30px 30px 30px 30px;
+    }
+        .subCatSle {
+        padding-bottom: 0;
+    }
+        .sProdPgImgPop {
+        padding: 0;
+    }
+        .sProdPgImg .owl-nav .owl-next {
+        opacity: 0.5;
+        right: 0;
+    }
+        .sProdPgImg .owl-nav .owl-prev {
+        left: 0;
+         opacity: 0.5;
+    }
+        .careerRow {
+        width: 100%;
+    }
+        .aboutRightBox {
+        margin-bottom: 30px;
+    }
+        .newsCont {
+        flex-direction: column;
+    }
+        .supportBox {
+        margin-bottom: 30px;
+    }
+        .locationBox {
+        margin-bottom: 24px;
+    }
+        .hearTop h2 {
+        font-size: 32px;
+    }
+    
+    .locationBox {
+        width: 100%;
+        height: auto;
+    }
+    }

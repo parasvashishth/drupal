@@ -1,0 +1,132 @@
+/**
+ * Owl Carousel v2.3.4
+ * Copyright 2013-2018 David Deutsch
+ * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
+ */
+ .owl-carousel .owl-dots,
+ .owl-carousel .owl-nav {
+     text-align                 : center;
+     -webkit-tap-highlight-color: transparent
+ }
+ 
+ .owl-carousel .owl-nav {
+     margin-top: 0px
+ }
+ 
+ .owl-carousel .owl-nav [class*=owl-] {
+     color           : #f16824;
+     background-color: transparent;
+     border          : none;
+     font-size       : 45px;
+     line-height     : 0px;
+     transition      : 0.5s;
+     display         : flex;
+     align-items     : center;
+     justify-content : center;
+     cursor          : pointer;
+     padding         : 10px 10px;
+     border-radius   : 50%;
+     width           : 60px;
+     height          : 60px;
+ }
+ 
+ .owl-carousel .owl-nav .owl-prev i {
+     margin-right : 3px;
+     margin-bottom: 3px;
+ }
+ 
+ .owl-carousel .owl-nav .owl-next i {
+     margin-left  : 3px;
+     margin-bottom: 3px;
+ }
+ 
+ .owl-carousel .owl-nav [class*=owl-]:hover {
+     text-decoration : none;
+     background-color: transparent;
+ }
+ 
+ .owl-carousel .owl-nav .disabled {
+     opacity: .5;
+     cursor : default
+ }
+ 
+ .owl-carousel .owl-nav.disabled+.owl-dots {
+     margin-top: 20px
+ }
+ 
+ button.owl-prev:focus {
+     outline: none;
+ }
+ 
+ button.owl-next:focus {
+     outline: none;
+ }
+ 
+ .owl-carousel .owl-nav {
+     /* display        : flex; */
+ /*     display: none; */
+     top            : 38%;
+     transform      : translate(0px, -50%);
+     width          : 100%;
+     position       : absolute;
+     justify-content: space-between;
+ }
+ 
+ .owl-carousel .owl-nav .owl-prev {
+     top      : 50%;
+     left     : -60px;
+     transform: translate(0px, -25%);
+     position : absolute;
+ }
+ 
+ .owl-carousel .owl-nav .owl-next {
+     top      : 50%;
+     right    : -60px;
+     transform: translate(0px, -25%);
+     position : absolute;
+ }
+ 
+ /* .our-clients-item {
+     width: 95%;
+ } */
+ 
+ .owl-carousel .owl-dots.disabled,
+ .owl-carousel .owl-nav.disabled {
+     display: none;
+ }
+ .owl-carousel .owl-dots .owl-dot {
+     display: inline-block;
+     zoom   : 1
+ }
+ 
+ .owl-carousel .owl-dots .owl-dot span {
+     margin-bottom              : 100px;
+     width                      : 9px;
+     height                     : 9px;
+     margin                     : 0px;
+     background                 : #ffffff;
+     /* border                     : 1px solid #333333; */
+     display                    : block;
+     -webkit-backface-visibility: visible;
+     transition                 : opacity .6s ease;
+     border-radius              : 30px
+ }
+ 
+ .owl-carousel .owl-dots .owl-dot.active span,
+ .owl-carousel .owl-dots .owl-dot:hover span {}
+ 
+ .owl-carousel .owl-dots .owl-dot.active span {
+     background-color: #3EBEB3;
+     /* border: 1px solid #333333; */
+ }
+ 
+ .owl-carousel .owl-dots .owl-dot:focus {
+     outline: none;
+ }
+ 
+ /* .owl-carousel .disabled+.owl-dots {
+     bottom  : -50px;
+     position: absolute;
+     left    : 45%;
+     z-index : 999999;
+ } */
