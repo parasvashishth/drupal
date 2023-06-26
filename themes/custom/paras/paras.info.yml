@@ -13,10 +13,8 @@
 # changes.
 name: paras
 type: theme
-lifecycle: deprecated
-lifecycle_link: https://www.drupal.org/node/3223395#s-bartik
-base theme: false
-description: 'A flexible, recolorable theme with many regions and a responsive, mobile-first layout.'
+base theme: claro
+description: 'This is Imperial Theme'
 package: Core
 version: VERSION
 libraries:
@@ -42,6 +40,6 @@ regions:
   footer_third: 'Footer third'
   footer_fourth: 'Footer fourth'
   footer_fifth: 'Footer fifth'
-  paras_data: 'Paras data'
+  header_menu: 'Header Menu'
 
 core_version_requirement: ^8 || ^9

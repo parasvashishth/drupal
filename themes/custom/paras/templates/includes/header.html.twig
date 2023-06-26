@@ -16,7 +16,12 @@
 						<div class="header_menu">
 							<div class="nav-toggle"></div>
 							<div class="nav-menus-wrapper">
-								<ul class="nav-menu">
+
+							<div class="headerMenu">
+							{{ page.header_menu }}
+							</div>
+
+								{# <ul class="nav-menu">
 									<li><a href="http://localhost/drupal/">Home</a></li>       
 									<li>
 										<a href="http://localhost/drupal/node/1">Company</a>
@@ -27,7 +32,6 @@
 											<li><a href="https://imperialauto.in/mission-and-vision/?id=core-values">Core Values</a></li>
 											<li><a href="https://imperialauto.in/group-companies/">Group Companies</a></li>
 											<li><a href="https://imperialauto.in/mergers-and-acquisitions/">Mergers & Acquisitions</a></li>
-<!-- 											<li><a href="/esg/">ESG</a></li> -->
 										</ul>
 									</li>
 									<li><a href="#.">Our People</a>
@@ -51,21 +55,10 @@
 											<li><a href="https://imperialauto.in/product-range/off-highway/">Off-Highway</a>
 												<ul class="sub-menu">
 													<li><a href="https://imperialauto.in/product-range/agriculture/">Agriculture</a>
-														<!-- 														<ul class="sub-menu">
-<li><a href="/product-range/tractors/">Tractor</a></li>
-<li><a href="/product-range/harvester/">Harvestor</a></li>
-<li><a href="/product-range/combine/">Combine</a></li>	
-</ul> -->
+														
 													</li>
 													<li><a href="https://imperialauto.in/product-range/construction/">Construction</a>
-														<!-- 														<ul class="sub-menu">
-<li><a href="/product-range/excavators/">Excavator</a></li>
-<li><a href="/product-range/backhoe/">Backhoe</a></li>
-<li><a href="/product-range/compactor/">Compactor</a></li>
-<li><a href="/product-range/v-loader/">V-Loader</a></li>
-<li><a href="/product-range/cranes/">Cranes</a></li>
-
-</ul> -->
+														
 													</li>
 													<li><a href="https://imperialauto.in/product-range/defense-and-railway/">Defence and Railway</a></li>
 													<li><a href="https://imperialauto.in/product-range/engine/">Engine</a></li>
@@ -76,8 +69,8 @@
 									</li>
 									<li><a href="https://imperialauto.in/products/">Products & Solutions</a>
 										<ul class="sub-menu">
-																						<li><a href="https://imperialauto.in/product/fcev-thermal-management/">FC-FCEV &#8211; Thermal Management</a></li>
-																						<li><a href="https://imperialauto.in/product/cng-hose-metal-tube/">CNG Hose &#038; Metal Tube</a></li>
+										<li><a href="https://imperialauto.in/product/fcev-thermal-management/">FC-FCEV &#8211; Thermal Management</a></li>
+										<li><a href="https://imperialauto.in/product/cng-hose-metal-tube/">CNG Hose &#038; Metal Tube</a></li>
 																						<li><a href="https://imperialauto.in/product/hvac-lines-hvac-assembly/">HVAC Lines &#038; HVAC Assembly</a></li>
 																						<li><a href="https://imperialauto.in/product/coolant-pipes-hoses-heater-hose/">Heater Hose / Coolant Pipes &#038; Hoses</a></li>
 																						<li><a href="https://imperialauto.in/product/brake-assembly-clutch-assembly/">Brake Assembly &#038; Clutch Assembly</a></li>
@@ -93,25 +86,13 @@
 																						<li><a href="https://imperialauto.in/product/oil-line-and-oil-cooler-assembly/">Oil Line &#038; Oil Cooler Assembly</a></li>
 																						<li><a href="https://imperialauto.in/product/engine-tubular-assemblies/">Engine Tubular Assemblies</a></li>
 																						<li><a href="https://imperialauto.in/product/dp-lines/">DP Lines</a></li>
-																						<!-- 													<li><a href="/product/nylon-tubes/">Nylon Tubes</a></li>
-<li><a href="#.">High Pressure Pipes</a>
-<ul class="sub-menu">
-<li><a href="/product/crdi/">CRDI</a></li>
-<li><a href="/product/tgdi/">TGDI</a></li>
-</ul>
-</li>
-<li><a href="/product/metal-tubes/">Metal Tubes</a></li>
-<li><a href="/product/exhaust-systems/">Exhaust Systems</a></li>
-<li><a href="/product/power-steering-lines/">Power Steering Lines</a></li>
-<li><a href="/product/ac-lines/">AC Lines</a></li>
-<li><a href="/product/rubber-hoses/">Rubber Hoses</a></li> -->
+																	
 
 										</ul>
 									</li>
 									<li><a href="#.">Technology</a>
 										<ul class="sub-menu">
 											<li><a href="https://imperialauto.in/certifications/">Certifications</a></li>
-<!-- 											<li><a href="/rd-centre/">R&D Centre</a></li> -->
 											<li><a href="https://imperialauto.in/facilities/">Facilities</a>
 												<ul class="sub-menu">
 													<li><a href="https://imperialauto.in/facilities/">Rubber Processing</a></li>
@@ -120,7 +101,6 @@
 													<li><a href="https://imperialauto.in/facilities/">Hydraulic Cleanliness</a></li>
 													<li><a href="https://imperialauto.in/facilities/">Quality and Certification</a></li>
 													<li><a href="https://imperialauto.in/facilities/">IAI Design Center</a></li>
-
 												</ul>
 											</li>
 										</ul>
@@ -132,7 +112,7 @@
 										<div class="nav-search-button">
 											<input type="text" placeholder="Search by Part no, product or keyword">
 											<i class="fa fa-search" aria-hidden="true"></i>
-											<!--<i class="nav-search-icon"></i>-->
+										
 										</div>
 
 										<form action="https://imperialauto.in" name="SearchForm" method="get">
@@ -143,11 +123,12 @@
 
 
 									</div>
-								</ul>
+								</ul> #}
 							</div>
 						</div>
 
 					</div>
 				</div>
+				
 			</nav>
 		</header>

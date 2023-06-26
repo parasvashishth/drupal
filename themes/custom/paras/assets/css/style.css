@@ -3258,3 +3258,43 @@ section.clients_we_serve_industry .owl-nav {display: none;}
     position: absolute;
     left: 0;
 }
+
+
+/* custom css */
+/* h2#block-homemenu-2-menu {
+    display: none;
+}
+
+nav#block-homemenu-2 > ul {
+    display: flex;
+}
+
+.headerMenu ul li{
+    margin-right: 10px;
+}
+
+.headerMenu ul li ul {
+	min-width: 180px;
+    margin: 0;
+    padding: 0;
+    display: none;
+    position: absolute;
+    list-style: none;
+    z-index: 98;
+    white-space: nowrap;
+	background-color: #fff;
+}
+
+.headerMenu ul li:hover ul{
+    display: block;
+}
+
+nav#block-homemenu-2 > ul > li > a{
+	padding: 25px 10px 25px 10px;
+    display: inline-block;
+}
+
+.headerMenu ul li ul li a{
+padding: 7px 20px;
+display: inline-block;
+} */
