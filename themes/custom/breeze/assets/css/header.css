@@ -983,3 +983,7 @@ header.header {
 .nav-menu > li > a:hover{
 	color: var(--yellow);
 }
+
+.region-header .block-menu {
+  width: auto !important;
+}
