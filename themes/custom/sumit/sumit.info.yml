@@ -49,5 +49,5 @@ project: 'drupal'
 datestamp: 1591221734
 
 
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^9 || ^10
 
