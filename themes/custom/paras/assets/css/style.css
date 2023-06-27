@@ -3298,3 +3298,19 @@ nav#block-homemenu-2 > ul > li > a{
 padding: 7px 20px;
 display: inline-block;
 } */
+
+/* .region.headerImper.region-header-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navigation {
+    width: auto;
+} */
+
+.headerImper div#block-logo img {
+    height: 103px;
+    object-fit: contain;
+}

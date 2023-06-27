@@ -21,7 +21,8 @@
         "drupal/core-project-message": "^9",
         "drupal/core-recommended": "^9",
         "drupal/core-vendor-hardening": "^9",
-        "drupal/devel": "^5.1"
+        "drupal/devel": "^5.1",
+        "drupal/paragraphs": "^1.15"
     },
     "conflict": {
         "drupal/drupal": "*"

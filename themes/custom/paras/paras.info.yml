@@ -41,5 +41,7 @@ regions:
   footer_fourth: 'Footer fourth'
   footer_fifth: 'Footer fifth'
   header_menu: 'Header Menu'
+  header_logo: 'Header Logo'
+  home_slider: 'Home Slider'
 
 core_version_requirement: ^8 || ^9
