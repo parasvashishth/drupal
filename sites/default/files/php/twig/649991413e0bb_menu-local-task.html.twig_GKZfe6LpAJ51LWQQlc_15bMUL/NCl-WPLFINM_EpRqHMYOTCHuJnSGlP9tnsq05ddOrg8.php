@@ -12,8 +12,13 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
+<<<<<<< HEAD:sites/default/files/php/twig/649991413e0bb_menu-local-task.html.twig_GKZfe6LpAJ51LWQQlc_15bMUL/NCl-WPLFINM_EpRqHMYOTCHuJnSGlP9tnsq05ddOrg8.php
 /* core/themes/seven/templates/classy/navigation/menu-local-task.html.twig */
 class __TwigTemplate_bf6d1e7337a198b902b06cee79e99eed7cf6eb45b0a90ac4604ab1e1d6ef3f8a extends \Twig\Template
+=======
+/* core/themes/seven/templates/classy/content/page-title.html.twig */
+class __TwigTemplate_b9c2d1dd0f372a4a244d75d2adf765d6d96d111c91f303385023050ac04aa7b0 extends \Twig\Template
+>>>>>>> 9e9a783727e6f5eb438efd0727dd7abc43e8e0a9:sites/default/files/php/twig/64998336e596e_page-title.html.twig_k9emceh7QGia_M5x-sG1iMCXg/EQGi4_h6bE5Sht624c-tRQNu9BJOCYlPxo1HijJ2u5Y.php
 {
     private $source;
     private $macros = [];
@@ -46,7 +51,11 @@ class __TwigTemplate_bf6d1e7337a198b902b06cee79e99eed7cf6eb45b0a90ac4604ab1e1d6e
 
     public function getTemplateName()
     {
+<<<<<<< HEAD:sites/default/files/php/twig/649991413e0bb_menu-local-task.html.twig_GKZfe6LpAJ51LWQQlc_15bMUL/NCl-WPLFINM_EpRqHMYOTCHuJnSGlP9tnsq05ddOrg8.php
         return "core/themes/seven/templates/classy/navigation/menu-local-task.html.twig";
+=======
+        return "core/themes/seven/templates/classy/content/page-title.html.twig";
+>>>>>>> 9e9a783727e6f5eb438efd0727dd7abc43e8e0a9:sites/default/files/php/twig/64998336e596e_page-title.html.twig_k9emceh7QGia_M5x-sG1iMCXg/EQGi4_h6bE5Sht624c-tRQNu9BJOCYlPxo1HijJ2u5Y.php
     }
 
     public function isTraitable()
@@ -77,8 +86,17 @@ class __TwigTemplate_bf6d1e7337a198b902b06cee79e99eed7cf6eb45b0a90ac4604ab1e1d6e
  * @see template_preprocess_menu_local_task()
  */
 #}
+<<<<<<< HEAD:sites/default/files/php/twig/649991413e0bb_menu-local-task.html.twig_GKZfe6LpAJ51LWQQlc_15bMUL/NCl-WPLFINM_EpRqHMYOTCHuJnSGlP9tnsq05ddOrg8.php
 <li{{ attributes.addClass(is_active ? 'is-active') }}>{{ link }}</li>
 ", "core/themes/seven/templates/classy/navigation/menu-local-task.html.twig", "E:\\xampp\\htdocs\\drupal\\core\\themes\\seven\\templates\\classy\\navigation\\menu-local-task.html.twig");
+=======
+{{ title_prefix }}
+{% if title %}
+  <h1{{ title_attributes.addClass('page-title') }}>{{ title }}</h1>
+{% endif %}
+{{ title_suffix }}
+", "core/themes/seven/templates/classy/content/page-title.html.twig", "C:\\xampp\\htdocs\\drupal\\core\\themes\\seven\\templates\\classy\\content\\page-title.html.twig");
+>>>>>>> 9e9a783727e6f5eb438efd0727dd7abc43e8e0a9:sites/default/files/php/twig/64998336e596e_page-title.html.twig_k9emceh7QGia_M5x-sG1iMCXg/EQGi4_h6bE5Sht624c-tRQNu9BJOCYlPxo1HijJ2u5Y.php
     }
     
     public function checkSecurity()

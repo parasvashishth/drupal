@@ -12,8 +12,8 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* core/themes/claro/templates/classy/navigation/toolbar.html.twig */
-class __TwigTemplate_906c1391d662401cd1bd73931fd0503dd152be5b389cae25e8e0509db153ee2e extends \Twig\Template
+/* core/themes/seven/templates/classy/navigation/toolbar.html.twig */
+class __TwigTemplate_2cb92d670ea7fcd914cdbaa063fb895fe1b557ca5abcfe76bc236823cbceb30a extends \Twig\Template
 {
     private $source;
     private $macros = [];
@@ -94,9 +94,15 @@ class __TwigTemplate_906c1391d662401cd1bd73931fd0503dd152be5b389cae25e8e0509db15
             </nav>
           </div>
         ";
+<<<<<<< HEAD:sites/default/files/php/twig/649991413e0bb_toolbar.html.twig_JHgAb3WplLRK3nXbNOuB2slEj/TuVVkKzDGsSratVvtgs9vL3bydz1xXaQ27rxhTCewF8.php
             $___internal_parse_6_ = ('' === $tmp = ob_get_clean()) ? '' : new Markup($tmp, $this->env->getCharset());
             // line 30
             echo $this->extensions['Drupal\Core\Template\TwigExtension']->renderVar(twig_spaceless($___internal_parse_6_));
+=======
+            $___internal_parse_1_ = ('' === $tmp = ob_get_clean()) ? '' : new Markup($tmp, $this->env->getCharset());
+            // line 30
+            echo $this->extensions['Drupal\Core\Template\TwigExtension']->renderVar(twig_spaceless($___internal_parse_1_));
+>>>>>>> 9e9a783727e6f5eb438efd0727dd7abc43e8e0a9:sites/default/files/php/twig/64998336e596e_toolbar.html.twig_JHgAb3WplLRK3nXbNOuB2slEj/aXLV6R8UZvnhKEBrpMJ8A6_dwN6wyNFVcBRvn0mPtmc.php
             // line 42
             echo "      </div>
     ";
@@ -116,7 +122,7 @@ class __TwigTemplate_906c1391d662401cd1bd73931fd0503dd152be5b389cae25e8e0509db15
 
     public function getTemplateName()
     {
-        return "core/themes/claro/templates/classy/navigation/toolbar.html.twig";
+        return "core/themes/seven/templates/classy/navigation/toolbar.html.twig";
     }
 
     public function isTraitable()
@@ -177,7 +183,11 @@ class __TwigTemplate_906c1391d662401cd1bd73931fd0503dd152be5b389cae25e8e0509db15
   </nav>
   {{ remainder }}
 </div>
+<<<<<<< HEAD:sites/default/files/php/twig/649991413e0bb_toolbar.html.twig_JHgAb3WplLRK3nXbNOuB2slEj/TuVVkKzDGsSratVvtgs9vL3bydz1xXaQ27rxhTCewF8.php
 ", "core/themes/claro/templates/classy/navigation/toolbar.html.twig", "E:\\xampp\\htdocs\\drupal\\core\\themes\\claro\\templates\\classy\\navigation\\toolbar.html.twig");
+=======
+", "core/themes/seven/templates/classy/navigation/toolbar.html.twig", "C:\\xampp\\htdocs\\drupal\\core\\themes\\seven\\templates\\classy\\navigation\\toolbar.html.twig");
+>>>>>>> 9e9a783727e6f5eb438efd0727dd7abc43e8e0a9:sites/default/files/php/twig/64998336e596e_toolbar.html.twig_JHgAb3WplLRK3nXbNOuB2slEj/aXLV6R8UZvnhKEBrpMJ8A6_dwN6wyNFVcBRvn0mPtmc.php
     }
     
     public function checkSecurity()

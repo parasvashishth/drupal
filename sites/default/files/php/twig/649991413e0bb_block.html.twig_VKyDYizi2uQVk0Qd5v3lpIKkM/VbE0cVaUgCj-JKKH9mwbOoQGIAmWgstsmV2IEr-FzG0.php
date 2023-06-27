@@ -12,8 +12,13 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
+<<<<<<< HEAD:sites/default/files/php/twig/649991413e0bb_block.html.twig_VKyDYizi2uQVk0Qd5v3lpIKkM/VbE0cVaUgCj-JKKH9mwbOoQGIAmWgstsmV2IEr-FzG0.php
 /* block.html.twig */
 class __TwigTemplate_a5f8096706276c1436c4c10603d4f43889e278ccd1fb2a314acad0a45d92eade extends \Twig\Template
+=======
+/* core/themes/seven/templates/classy/block/block.html.twig */
+class __TwigTemplate_0ae213dc2f5ec1737f66839363768f77cc357dbf1ca798781df61d3972c5e978 extends \Twig\Template
+>>>>>>> 9e9a783727e6f5eb438efd0727dd7abc43e8e0a9:sites/default/files/php/twig/64998336e596e_block.html.twig_v1VMCaHmg5U9ebEJgrSweiPm3/tHjVhI5hKpCvEJltgpi5TTuBnrdRH6MYwNnMOmM3BKk.php
 {
     private $source;
     private $macros = [];
@@ -84,7 +89,11 @@ class __TwigTemplate_a5f8096706276c1436c4c10603d4f43889e278ccd1fb2a314acad0a45d9
 
     public function getTemplateName()
     {
+<<<<<<< HEAD:sites/default/files/php/twig/649991413e0bb_block.html.twig_VKyDYizi2uQVk0Qd5v3lpIKkM/VbE0cVaUgCj-JKKH9mwbOoQGIAmWgstsmV2IEr-FzG0.php
         return "block.html.twig";
+=======
+        return "core/themes/seven/templates/classy/block/block.html.twig";
+>>>>>>> 9e9a783727e6f5eb438efd0727dd7abc43e8e0a9:sites/default/files/php/twig/64998336e596e_block.html.twig_v1VMCaHmg5U9ebEJgrSweiPm3/tHjVhI5hKpCvEJltgpi5TTuBnrdRH6MYwNnMOmM3BKk.php
     }
 
     public function isTraitable()
@@ -144,7 +153,11 @@ class __TwigTemplate_a5f8096706276c1436c4c10603d4f43889e278ccd1fb2a314acad0a45d9
     {{ content }}
   {% endblock %}
 </div>
+<<<<<<< HEAD:sites/default/files/php/twig/649991413e0bb_block.html.twig_VKyDYizi2uQVk0Qd5v3lpIKkM/VbE0cVaUgCj-JKKH9mwbOoQGIAmWgstsmV2IEr-FzG0.php
 ", "block.html.twig", "core/themes/seven/templates/classy/block/block.html.twig");
+=======
+", "core/themes/seven/templates/classy/block/block.html.twig", "C:\\xampp\\htdocs\\drupal\\core\\themes\\seven\\templates\\classy\\block\\block.html.twig");
+>>>>>>> 9e9a783727e6f5eb438efd0727dd7abc43e8e0a9:sites/default/files/php/twig/64998336e596e_block.html.twig_v1VMCaHmg5U9ebEJgrSweiPm3/tHjVhI5hKpCvEJltgpi5TTuBnrdRH6MYwNnMOmM3BKk.php
     }
     
     public function checkSecurity()

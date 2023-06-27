@@ -12,8 +12,8 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* core/themes/claro/templates/off-canvas-page-wrapper.html.twig */
-class __TwigTemplate_0473f5b2b2ef70cefe7537214e59c2982258cdaddde75d7bdfff29e3d4395ece extends \Twig\Template
+/* core/modules/system/templates/off-canvas-page-wrapper.html.twig */
+class __TwigTemplate_59d0b754acff1020e8c6739815ef3e0de407e9e089a23cfefe4a336277657ec2 extends \Twig\Template
 {
     private $source;
     private $macros = [];
@@ -38,7 +38,7 @@ class __TwigTemplate_0473f5b2b2ef70cefe7537214e59c2982258cdaddde75d7bdfff29e3d43
         // line 22
         if (($context["children"] ?? null)) {
             // line 23
-            echo "  <div class=\"page-wrapper dialog-off-canvas-main-canvas\" data-off-canvas-main-canvas>
+            echo "  <div class=\"dialog-off-canvas-main-canvas\" data-off-canvas-main-canvas>
     ";
             // line 24
             echo $this->extensions['Drupal\Core\Template\TwigExtension']->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["children"] ?? null), 24, $this->source), "html", null, true);
@@ -50,7 +50,7 @@ class __TwigTemplate_0473f5b2b2ef70cefe7537214e59c2982258cdaddde75d7bdfff29e3d43
 
     public function getTemplateName()
     {
-        return "core/themes/claro/templates/off-canvas-page-wrapper.html.twig";
+        return "core/modules/system/templates/off-canvas-page-wrapper.html.twig";
     }
 
     public function isTraitable()
@@ -87,11 +87,15 @@ class __TwigTemplate_0473f5b2b2ef70cefe7537214e59c2982258cdaddde75d7bdfff29e3d43
  */
 #}
 {% if children %}
-  <div class=\"page-wrapper dialog-off-canvas-main-canvas\" data-off-canvas-main-canvas>
+  <div class=\"dialog-off-canvas-main-canvas\" data-off-canvas-main-canvas>
     {{ children }}
   </div>
 {% endif %}
+<<<<<<< HEAD:sites/default/files/php/twig/649991413e0bb_off-canvas-page-wrapper.h_CwfPaw8VF0MFgNQJX4WosQ7vg/2whH3MIYYCarNWj-QZ1ip3wuadbz1d8Z6IPRcQ3-KtU.php
 ", "core/themes/claro/templates/off-canvas-page-wrapper.html.twig", "E:\\xampp\\htdocs\\drupal\\core\\themes\\claro\\templates\\off-canvas-page-wrapper.html.twig");
+=======
+", "core/modules/system/templates/off-canvas-page-wrapper.html.twig", "C:\\xampp\\htdocs\\drupal\\core\\modules\\system\\templates\\off-canvas-page-wrapper.html.twig");
+>>>>>>> 9e9a783727e6f5eb438efd0727dd7abc43e8e0a9:sites/default/files/php/twig/64998336e596e_off-canvas-page-wrapper.h_CwfPaw8VF0MFgNQJX4WosQ7vg/f-ftcO6HgQVWAj5qTVgbVo-vh1Dt5K3sHAitZ2ZKp0w.php
     }
     
     public function checkSecurity()

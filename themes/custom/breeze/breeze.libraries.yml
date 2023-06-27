@@ -1,0 +1,30 @@
+global:
+  css:
+    component: 
+
+      assets/css/bootstrap.min.css: {}
+      assets/css/header.css: {}
+      assets/css/owl.carousel.min.css: {}
+      assets/css/owl.theme.default.min.css: {}
+      assets/css/responsive.css: {}
+      assets/css/slick.css: {}
+      assets/css/slick-theme.css: {}
+      assets/css/style.css: {}
+  js:
+    component: 
+
+    assets/js/jquery.min.js: {}
+    assets/js/bootstrap.bundle.min.js: {}
+    assets/js/header.js: {}
+    assets/js//owl.carousel.min.js : {}
+    assets/js/main.js: {}
+    assets/js/slick.js: {}
+    assets/js/slick.min.js: {}
+
+
+
+
+
+
+
+

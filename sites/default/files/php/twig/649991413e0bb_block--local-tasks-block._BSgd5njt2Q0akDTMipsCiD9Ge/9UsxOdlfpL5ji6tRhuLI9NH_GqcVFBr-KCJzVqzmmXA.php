@@ -12,8 +12,13 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
+<<<<<<< HEAD:sites/default/files/php/twig/649991413e0bb_block--local-tasks-block._BSgd5njt2Q0akDTMipsCiD9Ge/9UsxOdlfpL5ji6tRhuLI9NH_GqcVFBr-KCJzVqzmmXA.php
 /* core/themes/seven/templates/classy/block/block--local-tasks-block.html.twig */
 class __TwigTemplate_44d5435d7e791e3c44a7680fa652724b8239dd9bfc3a9e5a9c39bcd1e5743767 extends \Twig\Template
+=======
+/* core/themes/seven/templates/classy/layout/region.html.twig */
+class __TwigTemplate_97edac9a59f70d36cf549e5cfd58ef71ebbf7cd0ca39d573560fad4120a28e76 extends \Twig\Template
+>>>>>>> 9e9a783727e6f5eb438efd0727dd7abc43e8e0a9:sites/default/files/php/twig/64998336e596e_region.html.twig_bpJ2RNfDNcYhLbhVL8kMxjaLD/skWxMDYvvA6PbiKNY2Df2WGMRX4AM2o0l3Wd_XhO1M0.php
 {
     private $source;
     private $macros = [];
@@ -66,7 +71,11 @@ class __TwigTemplate_44d5435d7e791e3c44a7680fa652724b8239dd9bfc3a9e5a9c39bcd1e57
 
     public function getTemplateName()
     {
+<<<<<<< HEAD:sites/default/files/php/twig/649991413e0bb_block--local-tasks-block._BSgd5njt2Q0akDTMipsCiD9Ge/9UsxOdlfpL5ji6tRhuLI9NH_GqcVFBr-KCJzVqzmmXA.php
         return "core/themes/seven/templates/classy/block/block--local-tasks-block.html.twig";
+=======
+        return "core/themes/seven/templates/classy/layout/region.html.twig";
+>>>>>>> 9e9a783727e6f5eb438efd0727dd7abc43e8e0a9:sites/default/files/php/twig/64998336e596e_region.html.twig_bpJ2RNfDNcYhLbhVL8kMxjaLD/skWxMDYvvA6PbiKNY2Df2WGMRX4AM2o0l3Wd_XhO1M0.php
     }
 
     public function isTraitable()
@@ -88,6 +97,7 @@ class __TwigTemplate_44d5435d7e791e3c44a7680fa652724b8239dd9bfc3a9e5a9c39bcd1e57
  * Theme override for tabs.
  */
 #}
+<<<<<<< HEAD:sites/default/files/php/twig/649991413e0bb_block--local-tasks-block._BSgd5njt2Q0akDTMipsCiD9Ge/9UsxOdlfpL5ji6tRhuLI9NH_GqcVFBr-KCJzVqzmmXA.php
 {% block content %}
   {% if content %}
     <nav class=\"tabs\" role=\"navigation\" aria-label=\"{{ 'Tabs'|t }}\">
@@ -96,6 +106,20 @@ class __TwigTemplate_44d5435d7e791e3c44a7680fa652724b8239dd9bfc3a9e5a9c39bcd1e57
   {% endif %}
 {% endblock %}
 ", "core/themes/seven/templates/classy/block/block--local-tasks-block.html.twig", "E:\\xampp\\htdocs\\drupal\\core\\themes\\seven\\templates\\classy\\block\\block--local-tasks-block.html.twig");
+=======
+{%
+  set classes = [
+    'region',
+    'region-' ~ region|clean_class,
+  ]
+%}
+{% if content %}
+  <div{{ attributes.addClass(classes) }}>
+    {{ content }}
+  </div>
+{% endif %}
+", "core/themes/seven/templates/classy/layout/region.html.twig", "C:\\xampp\\htdocs\\drupal\\core\\themes\\seven\\templates\\classy\\layout\\region.html.twig");
+>>>>>>> 9e9a783727e6f5eb438efd0727dd7abc43e8e0a9:sites/default/files/php/twig/64998336e596e_region.html.twig_bpJ2RNfDNcYhLbhVL8kMxjaLD/skWxMDYvvA6PbiKNY2Df2WGMRX4AM2o0l3Wd_XhO1M0.php
     }
     
     public function checkSecurity()

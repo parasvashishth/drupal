@@ -12,8 +12,13 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
+<<<<<<< HEAD:sites/default/files/php/twig/649991413e0bb_html.html.twig__xS1PiRo9tdD1etfWzI3NeYhJ/xbe4-OjwaQX6l7DFnCmbAsaXwgRpGbDVsump65QmLto.php
 /* themes/custom/paras/layout/html.html.twig */
 class __TwigTemplate_51cf6d0b959c073fa3b9b3bd0354dcfbf4997ee90604f3acca51621cdf419dd7 extends \Twig\Template
+=======
+/* core/themes/seven/templates/classy/layout/html.html.twig */
+class __TwigTemplate_683ec49079939e43a13a999c142e3da9cb63c9d8f274bdd9bb5e5cf4f64e3618 extends \Twig\Template
+>>>>>>> 9e9a783727e6f5eb438efd0727dd7abc43e8e0a9:sites/default/files/php/twig/64998336e596e_html.html.twig_JdUwcuwv9FfV6O0BE-Ir0Ysg8/G0JH50gxp5e6RUKy634TJmppKYp7FunYysb20MOUrtM.php
 {
     private $source;
     private $macros = [];
@@ -100,7 +105,11 @@ class __TwigTemplate_51cf6d0b959c073fa3b9b3bd0354dcfbf4997ee90604f3acca51621cdf4
 
     public function getTemplateName()
     {
+<<<<<<< HEAD:sites/default/files/php/twig/649991413e0bb_html.html.twig__xS1PiRo9tdD1etfWzI3NeYhJ/xbe4-OjwaQX6l7DFnCmbAsaXwgRpGbDVsump65QmLto.php
         return "themes/custom/paras/layout/html.html.twig";
+=======
+        return "core/themes/seven/templates/classy/layout/html.html.twig";
+>>>>>>> 9e9a783727e6f5eb438efd0727dd7abc43e8e0a9:sites/default/files/php/twig/64998336e596e_html.html.twig_JdUwcuwv9FfV6O0BE-Ir0Ysg8/G0JH50gxp5e6RUKy634TJmppKYp7FunYysb20MOUrtM.php
     }
 
     public function isTraitable()
@@ -170,7 +179,11 @@ class __TwigTemplate_51cf6d0b959c073fa3b9b3bd0354dcfbf4997ee90604f3acca51621cdf4
     <js-bottom-placeholder token=\"{{ placeholder_token }}\">
   </body>
 </html>
+<<<<<<< HEAD:sites/default/files/php/twig/649991413e0bb_html.html.twig__xS1PiRo9tdD1etfWzI3NeYhJ/xbe4-OjwaQX6l7DFnCmbAsaXwgRpGbDVsump65QmLto.php
 ", "themes/custom/paras/layout/html.html.twig", "E:\\xampp\\htdocs\\drupal\\themes\\custom\\paras\\layout\\html.html.twig");
+=======
+", "core/themes/seven/templates/classy/layout/html.html.twig", "C:\\xampp\\htdocs\\drupal\\core\\themes\\seven\\templates\\classy\\layout\\html.html.twig");
+>>>>>>> 9e9a783727e6f5eb438efd0727dd7abc43e8e0a9:sites/default/files/php/twig/64998336e596e_html.html.twig_JdUwcuwv9FfV6O0BE-Ir0Ysg8/G0JH50gxp5e6RUKy634TJmppKYp7FunYysb20MOUrtM.php
     }
     
     public function checkSecurity()

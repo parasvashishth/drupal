@@ -12,8 +12,8 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* core/themes/claro/templates/form-element-label.html.twig */
-class __TwigTemplate_6dee2b8c08a28661ac7cddf4db0cb8274036fd09bf1d7107ae74e74cce9a387d extends \Twig\Template
+/* core/themes/seven/templates/classy/form/form-element-label.html.twig */
+class __TwigTemplate_d0a810a64d623aa2b10d74928d3f07f4b04d732442e6e5bfbd7a35146e022c27 extends \Twig\Template
 {
     private $source;
     private $macros = [];
@@ -36,25 +36,25 @@ class __TwigTemplate_6dee2b8c08a28661ac7cddf4db0cb8274036fd09bf1d7107ae74e74cce9
     {
         $macros = $this->macros;
         // line 16
-        $context["classes"] = [0 => "form-item__label", 1 => (((        // line 18
-($context["title_display"] ?? null) == "after")) ? ("option") : ("")), 2 => (((        // line 19
-($context["title_display"] ?? null) == "invisible")) ? ("visually-hidden") : ("")), 3 => ((        // line 20
-($context["required"] ?? null)) ? ("js-form-required") : ("")), 4 => ((        // line 21
+        $context["classes"] = [0 => (((        // line 17
+($context["title_display"] ?? null) == "after")) ? ("option") : ("")), 1 => (((        // line 18
+($context["title_display"] ?? null) == "invisible")) ? ("visually-hidden") : ("")), 2 => ((        // line 19
+($context["required"] ?? null)) ? ("js-form-required") : ("")), 3 => ((        // line 20
 ($context["required"] ?? null)) ? ("form-required") : (""))];
-        // line 24
+        // line 23
         if (( !twig_test_empty(($context["title"] ?? null)) || ($context["required"] ?? null))) {
-            // line 25
+            // line 24
             echo "<label";
-            echo $this->extensions['Drupal\Core\Template\TwigExtension']->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["attributes"] ?? null), "addClass", [0 => ($context["classes"] ?? null)], "method", false, false, true, 25), 25, $this->source), "html", null, true);
+            echo $this->extensions['Drupal\Core\Template\TwigExtension']->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["attributes"] ?? null), "addClass", [0 => ($context["classes"] ?? null)], "method", false, false, true, 24), 24, $this->source), "html", null, true);
             echo ">";
-            echo $this->extensions['Drupal\Core\Template\TwigExtension']->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["title"] ?? null), 25, $this->source), "html", null, true);
+            echo $this->extensions['Drupal\Core\Template\TwigExtension']->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["title"] ?? null), 24, $this->source), "html", null, true);
             echo "</label>";
         }
     }
 
     public function getTemplateName()
     {
-        return "core/themes/claro/templates/form-element-label.html.twig";
+        return "core/themes/seven/templates/classy/form/form-element-label.html.twig";
     }
 
     public function isTraitable()
@@ -64,7 +64,7 @@ class __TwigTemplate_6dee2b8c08a28661ac7cddf4db0cb8274036fd09bf1d7107ae74e74cce9
 
     public function getDebugInfo()
     {
-        return array (  47 => 25,  45 => 24,  43 => 21,  42 => 20,  41 => 19,  40 => 18,  39 => 16,);
+        return array (  47 => 24,  45 => 23,  43 => 20,  42 => 19,  41 => 18,  40 => 17,  39 => 16,);
     }
 
     public function getSourceContext()
@@ -72,7 +72,7 @@ class __TwigTemplate_6dee2b8c08a28661ac7cddf4db0cb8274036fd09bf1d7107ae74e74cce9
         return new Source("{#
 /**
  * @file
- * Template override for a form element label.
+ * Theme override for a form element label.
  *
  * Available variables:
  * - title: The label's text.
@@ -85,7 +85,6 @@ class __TwigTemplate_6dee2b8c08a28661ac7cddf4db0cb8274036fd09bf1d7107ae74e74cce9
 #}
 {%
   set classes = [
-    'form-item__label',
     title_display == 'after' ? 'option',
     title_display == 'invisible' ? 'visually-hidden',
     required ? 'js-form-required',
@@ -95,13 +94,17 @@ class __TwigTemplate_6dee2b8c08a28661ac7cddf4db0cb8274036fd09bf1d7107ae74e74cce9
 {% if title is not empty or required -%}
   <label{{ attributes.addClass(classes) }}>{{ title }}</label>
 {%- endif %}
+<<<<<<< HEAD:sites/default/files/php/twig/649991413e0bb_form-element-label.html.t_cIbtxoPsGW8SYwKEbLivQfjp6/pbjzQ5TNKMlLk7-xLll8-igwASG7XxPZErDTb8LUSyc.php
 ", "core/themes/claro/templates/form-element-label.html.twig", "E:\\xampp\\htdocs\\drupal\\core\\themes\\claro\\templates\\form-element-label.html.twig");
+=======
+", "core/themes/seven/templates/classy/form/form-element-label.html.twig", "C:\\xampp\\htdocs\\drupal\\core\\themes\\seven\\templates\\classy\\form\\form-element-label.html.twig");
+>>>>>>> 9e9a783727e6f5eb438efd0727dd7abc43e8e0a9:sites/default/files/php/twig/64998336e596e_form-element-label.html.t_cIbtxoPsGW8SYwKEbLivQfjp6/BNqYEo7rqUJO3nNez9AU6UO0QbBiLgQ0Fxek84CpfMo.php
     }
     
     public function checkSecurity()
     {
-        static $tags = array("set" => 16, "if" => 24);
-        static $filters = array("escape" => 25);
+        static $tags = array("set" => 16, "if" => 23);
+        static $filters = array("escape" => 24);
         static $functions = array();
 
         try {

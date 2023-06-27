@@ -12,8 +12,8 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* core/themes/claro/templates/navigation/menu--toolbar.html.twig */
-class __TwigTemplate_44566b5b6ef9f67094d596dbeac53ca7e25571377bad0c9b1d80108400de8163 extends \Twig\Template
+/* core/modules/toolbar/templates/menu--toolbar.html.twig */
+class __TwigTemplate_bd0e40e981bca309d46d0926e132e6ea4ced811aa1ad0b40088f2c410670508c extends \Twig\Template
 {
     private $source;
     private $macros = [];
@@ -35,19 +35,19 @@ class __TwigTemplate_44566b5b6ef9f67094d596dbeac53ca7e25571377bad0c9b1d80108400d
     protected function doDisplay(array $context, array $blocks = [])
     {
         $macros = $this->macros;
-        // line 24
+        // line 23
         $macros["menus"] = $this->macros["menus"] = $this;
-        // line 25
+        // line 24
         echo "
 ";
-        // line 30
-        echo $this->extensions['Drupal\Core\Template\TwigExtension']->renderVar(twig_call_macro($macros["menus"], "macro_menu_links", [($context["items"] ?? null), ($context["attributes"] ?? null), 0], 30, $context, $this->getSourceContext()));
+        // line 29
+        echo $this->extensions['Drupal\Core\Template\TwigExtension']->renderVar(twig_call_macro($macros["menus"], "macro_menu_links", [($context["items"] ?? null), ($context["attributes"] ?? null), 0], 29, $context, $this->getSourceContext()));
         echo "
 
 ";
     }
 
-    // line 32
+    // line 31
     public function macro_menu_links($__items__ = null, $__attributes__ = null, $__menu_level__ = null, ...$__varargs__)
     {
         $macros = $this->macros;
@@ -62,62 +62,62 @@ class __TwigTemplate_44566b5b6ef9f67094d596dbeac53ca7e25571377bad0c9b1d80108400d
 
         ob_start();
         try {
-            // line 33
+            // line 32
             echo "  ";
             $macros["menus"] = $this;
-            // line 34
+            // line 33
             echo "  ";
             if (($context["items"] ?? null)) {
-                // line 35
+                // line 34
                 echo "    ";
                 if ((($context["menu_level"] ?? null) == 0)) {
-                    // line 36
+                    // line 35
                     echo "      <ul";
-                    echo $this->extensions['Drupal\Core\Template\TwigExtension']->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["attributes"] ?? null), "addClass", [0 => "toolbar-menu", 1 => "claro-toolbar-menu"], "method", false, false, true, 36), 36, $this->source), "html", null, true);
+                    echo $this->extensions['Drupal\Core\Template\TwigExtension']->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, ($context["attributes"] ?? null), "addClass", [0 => "toolbar-menu"], "method", false, false, true, 35), 35, $this->source), "html", null, true);
                     echo ">
     ";
                 } else {
-                    // line 38
+                    // line 37
                     echo "      <ul class=\"toolbar-menu\">
     ";
                 }
-                // line 40
+                // line 39
                 echo "    ";
                 $context['_parent'] = $context;
                 $context['_seq'] = twig_ensure_traversable(($context["items"] ?? null));
                 foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-                    // line 41
+                    // line 40
                     echo "      ";
-                    // line 42
-                    $context["classes"] = [0 => "menu-item", 1 => ((twig_get_attribute($this->env, $this->source,                     // line 44
-$context["item"], "is_expanded", [], "any", false, false, true, 44)) ? ("menu-item--expanded") : ("")), 2 => ((twig_get_attribute($this->env, $this->source,                     // line 45
-$context["item"], "is_collapsed", [], "any", false, false, true, 45)) ? ("menu-item--collapsed") : ("")), 3 => ((twig_get_attribute($this->env, $this->source,                     // line 46
-$context["item"], "in_active_trail", [], "any", false, false, true, 46)) ? ("menu-item--active-trail") : (""))];
-                    // line 49
+                    // line 41
+                    $context["classes"] = [0 => "menu-item", 1 => ((twig_get_attribute($this->env, $this->source,                     // line 43
+$context["item"], "is_expanded", [], "any", false, false, true, 43)) ? ("menu-item--expanded") : ("")), 2 => ((twig_get_attribute($this->env, $this->source,                     // line 44
+$context["item"], "is_collapsed", [], "any", false, false, true, 44)) ? ("menu-item--collapsed") : ("")), 3 => ((twig_get_attribute($this->env, $this->source,                     // line 45
+$context["item"], "in_active_trail", [], "any", false, false, true, 45)) ? ("menu-item--active-trail") : (""))];
+                    // line 48
                     echo "      <li";
-                    echo $this->extensions['Drupal\Core\Template\TwigExtension']->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["item"], "attributes", [], "any", false, false, true, 49), "addClass", [0 => ($context["classes"] ?? null)], "method", false, false, true, 49), 49, $this->source), "html", null, true);
+                    echo $this->extensions['Drupal\Core\Template\TwigExtension']->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["item"], "attributes", [], "any", false, false, true, 48), "addClass", [0 => ($context["classes"] ?? null)], "method", false, false, true, 48), 48, $this->source), "html", null, true);
                     echo ">
         ";
-                    // line 50
-                    echo $this->extensions['Drupal\Core\Template\TwigExtension']->escapeFilter($this->env, $this->extensions['Drupal\Core\Template\TwigExtension']->getLink($this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["item"], "title", [], "any", false, false, true, 50), 50, $this->source), $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["item"], "url", [], "any", false, false, true, 50), 50, $this->source)), "html", null, true);
+                    // line 49
+                    echo $this->extensions['Drupal\Core\Template\TwigExtension']->escapeFilter($this->env, $this->extensions['Drupal\Core\Template\TwigExtension']->getLink($this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["item"], "title", [], "any", false, false, true, 49), 49, $this->source), $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["item"], "url", [], "any", false, false, true, 49), 49, $this->source)), "html", null, true);
                     echo "
         ";
-                    // line 51
-                    if (twig_get_attribute($this->env, $this->source, $context["item"], "below", [], "any", false, false, true, 51)) {
-                        // line 52
+                    // line 50
+                    if (twig_get_attribute($this->env, $this->source, $context["item"], "below", [], "any", false, false, true, 50)) {
+                        // line 51
                         echo "          ";
-                        echo $this->extensions['Drupal\Core\Template\TwigExtension']->renderVar(twig_call_macro($macros["menus"], "macro_menu_links", [twig_get_attribute($this->env, $this->source, $context["item"], "below", [], "any", false, false, true, 52), ($context["attributes"] ?? null), (($context["menu_level"] ?? null) + 1)], 52, $context, $this->getSourceContext()));
+                        echo $this->extensions['Drupal\Core\Template\TwigExtension']->renderVar(twig_call_macro($macros["menus"], "macro_menu_links", [twig_get_attribute($this->env, $this->source, $context["item"], "below", [], "any", false, false, true, 51), ($context["attributes"] ?? null), (($context["menu_level"] ?? null) + 1)], 51, $context, $this->getSourceContext()));
                         echo "
         ";
                     }
-                    // line 54
+                    // line 53
                     echo "      </li>
     ";
                 }
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 56
+                // line 55
                 echo "    </ul>
   ";
             }
@@ -130,7 +130,7 @@ $context["item"], "in_active_trail", [], "any", false, false, true, 46)) ? ("men
 
     public function getTemplateName()
     {
-        return "core/themes/claro/templates/navigation/menu--toolbar.html.twig";
+        return "core/modules/toolbar/templates/menu--toolbar.html.twig";
     }
 
     public function isTraitable()
@@ -140,7 +140,7 @@ $context["item"], "in_active_trail", [], "any", false, false, true, 46)) ? ("men
 
     public function getDebugInfo()
     {
-        return array (  121 => 56,  114 => 54,  108 => 52,  106 => 51,  102 => 50,  97 => 49,  95 => 46,  94 => 45,  93 => 44,  92 => 42,  90 => 41,  85 => 40,  81 => 38,  75 => 36,  72 => 35,  69 => 34,  66 => 33,  51 => 32,  44 => 30,  41 => 25,  39 => 24,);
+        return array (  121 => 55,  114 => 53,  108 => 51,  106 => 50,  102 => 49,  97 => 48,  95 => 45,  94 => 44,  93 => 43,  92 => 41,  90 => 40,  85 => 39,  81 => 37,  75 => 35,  72 => 34,  69 => 33,  66 => 32,  51 => 31,  44 => 29,  41 => 24,  39 => 23,);
     }
 
     public function getSourceContext()
@@ -148,10 +148,7 @@ $context["item"], "in_active_trail", [], "any", false, false, true, 46)) ? ("men
         return new Source("{#
 /**
  * @file
- * Theme override to display a toolbar menu.
- *
- * If Claro is the admin theme, this template will be used by the active theme
- * even if the active theme is not Claro.
+ * Default theme implementation to display a toolbar menu.
  *
  * Available variables:
  * - menu_name: The machine name of the menu.
@@ -166,6 +163,8 @@ $context["item"], "in_active_trail", [], "any", false, false, true, 46)) ? ("men
  *   - is_collapsed: TRUE if the link has children within the current menu tree
  *     that are not currently visible.
  *   - in_active_trail: TRUE if the link is in the active trail.
+ *
+ * @ingroup themeable
  */
 #}
 {% import _self as menus %}
@@ -180,7 +179,7 @@ $context["item"], "in_active_trail", [], "any", false, false, true, 46)) ? ("men
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
-      <ul{{ attributes.addClass('toolbar-menu', 'claro-toolbar-menu') }}>
+      <ul{{ attributes.addClass('toolbar-menu') }}>
     {% else %}
       <ul class=\"toolbar-menu\">
     {% endif %}
@@ -203,14 +202,18 @@ $context["item"], "in_active_trail", [], "any", false, false, true, 46)) ? ("men
     </ul>
   {% endif %}
 {% endmacro %}
+<<<<<<< HEAD:sites/default/files/php/twig/649991413e0bb_menu--toolbar.html.twig_ok6dCl2zxEitE4qjkrtsb0r1e/URKZoX9G4liuBuPLKk3xCuaAtehDfWBhFlJQHaUR1qQ.php
 ", "core/themes/claro/templates/navigation/menu--toolbar.html.twig", "E:\\xampp\\htdocs\\drupal\\core\\themes\\claro\\templates\\navigation\\menu--toolbar.html.twig");
+=======
+", "core/modules/toolbar/templates/menu--toolbar.html.twig", "C:\\xampp\\htdocs\\drupal\\core\\modules\\toolbar\\templates\\menu--toolbar.html.twig");
+>>>>>>> 9e9a783727e6f5eb438efd0727dd7abc43e8e0a9:sites/default/files/php/twig/64998336e596e_menu--toolbar.html.twig_ok6dCl2zxEitE4qjkrtsb0r1e/n8PDcrGYcQugRM0dYgVAdU_5k-jXLtSyDkvwriHelkA.php
     }
     
     public function checkSecurity()
     {
-        static $tags = array("import" => 24, "macro" => 32, "if" => 34, "for" => 40, "set" => 42);
-        static $filters = array("escape" => 36);
-        static $functions = array("link" => 50);
+        static $tags = array("import" => 23, "macro" => 31, "if" => 33, "for" => 39, "set" => 41);
+        static $filters = array("escape" => 35);
+        static $functions = array("link" => 49);
 
         try {
             $this->sandbox->checkSecurity(
