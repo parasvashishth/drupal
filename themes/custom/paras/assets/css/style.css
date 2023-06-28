@@ -147,11 +147,11 @@ ul.nav-menu > li > .submenu-indicator {
 	position: relative;
 }
 
-.main-header {
+/* .main-header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-}
+} */
 
 .banner_left {
 	width: 542px;
@@ -3313,4 +3313,9 @@ display: inline-block;
 .headerImper div#block-logo img {
     height: 103px;
     object-fit: contain;
+}
+
+.headerMenu {
+    display: flex;
+    align-items: center;
 }
