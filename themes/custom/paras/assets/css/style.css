@@ -3319,3 +3319,8 @@ display: inline-block;
     display: flex;
     align-items: center;
 }
+
+.navigation {
+	display: flex;
+    justify-content: end;
+}
