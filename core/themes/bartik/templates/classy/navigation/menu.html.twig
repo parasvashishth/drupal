@@ -31,15 +31,9 @@
   {% if items %}
     {% if menu_level == 0 %}
       <ul{{ attributes.addClass('nav-menu') }}>
-<<<<<<< HEAD
-      {% else %}
-        <ul class="sub-menu">
-      {% endif %}
-=======
     {% else %}
-      <ul class="menu">
+      <ul class="sub-menu">
     {% endif %}
->>>>>>> ed38b98485ad9ffe2bbca3ce17471c80e4519789
     {% for item in items %}
       {%
         set classes = [
